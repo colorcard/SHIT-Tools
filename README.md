@@ -4,6 +4,9 @@ S.H.I.T Journal Downloader 是一套用于从 [S.H.I.T Journal](https://shitjour
 
 ## 🔬 原理说明
 
+> [!WARNING]
+> 仅供交流学习使用，请勿用于非法攻击用途。
+
 由于该期刊网站的附件并没有直接暴露公网的静态 URL，而是使用了 **Supabase Storage** 的鉴权防盗链机制，普通下载工具无法直接抓取 PDF 文件。其背后的运作逻辑如下：
 
 1. 网站将 PDF 文件存放于权限受限的 `manuscripts` 存储桶中。
