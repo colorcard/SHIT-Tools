@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.H.I.T Journal | PDF Fetcher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Serif+SC:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-accent-gold: #b18e26;
+            --color-accent-gold-hover: #987820;
+            --color-charcoal: #2c3e50;
+            --color-charcoal-light: #4a5568;
+            --color-bg: #fcfcfc;
+            --color-paper: #ffffff;
+            --color-border: #e2e8f0;
+            --color-science-red: #d12f2f;
+            --color-success: #2f855a;
+        }
+
+        body { 
+            font-family: 'Inter', 'Noto Serif SC', sans-serif; 
+            background-color: var(--color-bg); 
+            color: var(--color-charcoal);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            background-color: var(--color-paper);
+            border-bottom: 1px solid var(--color-border);
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 28px;
+            color: var(--color-charcoal);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .logo-text span {
+            color: var(--color-accent-gold);
+        }
+
+        .container { 
+            background-color: var(--color-paper); 
+            padding: 50px 40px; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -2px rgba(0,0,0,0.05); 
+            width: 100%;
+            max-width: 550px;
+            margin: 60px 20px;
+            border-top: 4px solid var(--color-accent-gold);
+            box-sizing: border-box;
+        }
+
+        h1 { 
+            font-family: 'Playfair Display', serif;
+            text-align: center; 
+            color: var(--color-charcoal); 
+            margin-top: 0;
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--color-charcoal-light);
+            font-size: 14px;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .form-group { margin-bottom: 25px; }
+        
+        label { 
+            display: block; 
+            margin-bottom: 10px; 
+            font-weight: 600; 
+            color: var(--color-charcoal);
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        input[type="text"] { 
+            width: 100%; 
+            padding: 14px 16px; 
+            border: 1px solid var(--color-border); 
+            border-radius: 4px; 
+            box-sizing: border-box; 
+            font-size: 15px; 
+            font-family: inherit;
+            transition: all 0.3s ease;
+            background-color: var(--color-bg);
+        }
+
+        input[type="text"]:focus {
+            border-color: var(--color-accent-gold);
+            outline: none;
+            box-shadow: 0 0 0 1px var(--color-accent-gold);
+            background-color: var(--color-paper);
+        }
+
+        button { 
+            width: 100%; 
+            padding: 14px; 
+            background-color: var(--color-charcoal); 
+            color: white; 
+            border: none; 
+            border-radius: 4px; 
+            font-size: 15px; 
+            font-weight: 600;
+            font-family: inherit;
+            letter-spacing: 0.05em;
+            cursor: pointer; 
+            transition: all 0.3s ease; 
+        }
+
+        button:hover { background-color: #1a252f; }
+        button:active { transform: translateY(1px); }
+        button:disabled { 
+            background-color: var(--color-border); 
+            color: var(--color-charcoal-light);
+            cursor: not-allowed; 
+            transform: none;
+        }
+
+        #status { 
+            margin-top: 25px; 
+            padding: 16px; 
+            border-radius: 4px; 
+            display: none; 
+            font-size: 14px;
+            line-height: 1.6;
+            white-space: pre-line;
+            border-left: 4px solid;
+            font-weight: 500;
+        }
+
+        .success { background-color: #f0fdf4; color: #166534; border-left-color: var(--color-success) !important; }
+        .error { background-color: #fef2f2; color: #991b1b; border-left-color: var(--color-science-red) !important; }
+        .info { background-color: #f8fafc; color: var(--color-charcoal-light); border-left-color: var(--color-accent-gold) !important; }
+
+        #result {
+            text-align: center; 
+            display: none;
+            margin-top: 25px;
+        }
+
+        #download-link { 
+            display: inline-block; 
+            width: 100%;
+            box-sizing: border-box;
+            padding: 14px; 
+            background-color: var(--color-accent-gold); 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 4px; 
+            font-weight: 600;
+            font-family: inherit;
+            transition: background-color 0.3s; 
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        #download-link:hover { background-color: var(--color-accent-gold-hover); }
+
+        .hint {
+            font-size: 13px;
+            color: var(--color-charcoal-light);
+            margin-top: 8px;
+        }
+        
+        footer {
+            margin-top: auto;
+            padding: 30px;
+            text-align: center;
+            font-size: 13px;
+            color: var(--color-charcoal-light);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo-text">S.H.I.T. <span>Journal</span></a>
+    </header>
+
+    <div class="container">
+        <h1>Document Fetcher</h1>
+        <div class="subtitle">Securely access preprint manuscripts</div>
+        
+        <div class="form-group">
+            <label for="url">Preprint URL / UUID</label>
+            <input type="text" id="url" placeholder="e.g. https://shitjournal.org/preprints/b9cff339-..." autocomplete="off" spellcheck="false">
+            <div class="hint">Paste the full URL or the document UUID.</div>
+        </div>
+        
+        <button id="downloadBtn" onclick="processDownload()">Generate Direct Link</button>
+        
+        <div id="status"></div>
+        <div id="result">
+            <a id="download-link" href="#" target="_blank" download>Download PDF Document</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 S.H.I.T Journal Archiver. For educational purposes only.
+    </footer>
+
+    <script>
+        const SUPABASE_URL = "https://bcgdqepzakcufaadgnda.supabase.co";
+        const SUPABASE_KEY = "sb_publishable_wHqWLjQwO2lMwkGLeBktng_Mk_xf5xd";
+
+        function showStatus(message, type) {
+            const statusEl = document.getElementById("status");
+            statusEl.style.display = "block";
+            statusEl.className = type;
+            statusEl.innerText = message;
+        }
+
+        async function processDownload() {
+            const inputStr = document.getElementById("url").value.trim();
+            const btn = document.getElementById("downloadBtn");
+            const resultDiv = document.getElementById("result");
+            const downloadLink = document.getElementById("download-link");
+            
+            if (!inputStr) {
+                showStatus("Error: Please provide a valid URL or UUID.", "error");
+                return;
+            }
+
+            const uuidMatch = inputStr.match(/([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})/i);
+            if (!uuidMatch) {
+                showStatus("Error: Could not extract a valid UUID from the input.", "error");
+                return;
+            }
+            const uuid = uuidMatch[1];
+
+            btn.disabled = true;
+            btn.innerText = "Authenticating...";
+            resultDiv.style.display = "none";
+            showStatus("Querying database for manuscript path...", "info");
+
+            const headers = {
+                "apikey": SUPABASE_KEY,
+                "Authorization": `Bearer ${SUPABASE_KEY}`,
+                "Content-Type": "application/json"
+            };
+
+            try {
+                const dbRes = await fetch(`${SUPABASE_URL}/rest/v1/preprints_with_ratings_mat?id=eq.${uuid}&select=pdf_path`, {
+                    headers: headers
+                });
+                
+                if (!dbRes.ok) throw new Error("Database query failed. Manuscript may not exist.");
+                
+                const dbData = await dbRes.json();
+                if (!dbData || dbData.length === 0) {
+                    throw new Error("Record not found for the provided UUID.");
+                }
+                
+                const pdfPath = dbData[0].pdf_path;
+                if (!pdfPath) {
+                    throw new Error("No PDF attachment found for this manuscript.");
+                }
+                
+                showStatus(`Path resolved: ${pdfPath}\nRequesting signed storage token...`, "info");
+
+                const signRes = await fetch(`${SUPABASE_URL}/storage/v1/object/sign/manuscripts/${pdfPath}`, {
+                    method: 'POST',
+                    headers: headers,
+                    body: JSON.stringify({ expiresIn: 3600 })
+                });
+
+                if (!signRes.ok) throw new Error("Failed to acquire signed URL. Access might be restricted.");
+
+                const signData = await signRes.json();
+                if (!signData.signedURL) throw new Error("Invalid response from storage API.");
+
+                const finalUrl = `${SUPABASE_URL}/storage/v1${signData.signedURL}`;
+                
+                showStatus("Authentication successful. Secure link generated.", "success");
+                downloadLink.href = finalUrl;
+                
+                const fileName = pdfPath.split('/').pop();
+                downloadLink.download = fileName;
+                resultDiv.style.display = "block";
+
+            } catch (err) {
+                showStatus(err.message, "error");
+            } finally {
+                btn.disabled = false;
+                btn.innerText = "Generate Direct Link";
+            }
+        }
+
+        document.getElementById('url').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                processDownload();
+            }
+        });
+    </script>
+</body>
+</html>
