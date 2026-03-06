@@ -1,11 +1,11 @@
 # S.H.I.T Journal Downloader
 
 S.H.I.T Journal Downloader 是一套用于从 [S.H.I.T Journal](https://shitjournal.org) 安全、快速地下载预印本 PDF 文件的工具集。包含一个功能全面的 **Python 自动化脚本** 以及一个仿官方极简设计的 **Web 网页工具**。
+> [!TIP]
+> 快速访问使用：https://colorcard.github.io/SHIT-PDF-Downloader/
+
 
 ## 🔬 原理说明
-
-> [!WARNING]
-> 仅供交流学习使用，请勿用于非法攻击用途。
 
 由于该期刊网站的附件并没有直接暴露公网的静态 URL，而是使用了 **Supabase Storage** 的鉴权防盗链机制，普通下载工具无法直接抓取 PDF 文件。其背后的运作逻辑如下：
 
@@ -15,6 +15,9 @@ S.H.I.T Journal Downloader 是一套用于从 [S.H.I.T Journal](https://shitjour
 4. 拼接基础路由 `/storage/v1` 后，最终得到可安全下载文件的直链。
 
 本工具通过自动化模拟上述前端交互流程，通过提取原文链接中的 `UUID` 标识，自动完成 **查询路径 -> 签发 Token -> 获取防盗链直链** 的全过程。
+
+> [!WARNING]
+> 仅供交流学习使用，请勿用于非法攻击用途。
 
 ---
 
