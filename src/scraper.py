@@ -8,7 +8,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 SUPABASE_URL = "https://bcgdqepzakcufaadgnda.supabase.co"
 SUPABASE_KEY = "sb_publishable_wHqWLjQwO2lMwkGLeBktng_Mk_xf5xd"
-DATA_FILE = "../data/scraped_articles.json"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_FILE = os.path.join(SCRIPT_DIR, "../data/scraped_articles.json")
 ZONES = ["latrine", "septic", "stone", "sediment"]
 
 def load_existing_data():
