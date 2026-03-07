@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.H.I.T Journal | 数据分析</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Serif+SC:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/wordcloud@1.2.2/src/wordcloud2.min.js"></script>
+    <style>
+        :root {
+            --color-accent-gold: #b18e26;
+            --color-charcoal: #2c3e50;
+            --color-charcoal-light: #4a5568;
+            --color-bg: #fcfcfc;
+            --color-paper: #ffffff;
+            --color-border: #e2e8f0;
+        }
+        body {
+            font-family: 'Inter', 'Noto Serif SC', sans-serif;
+            background-color: var(--color-bg);
+            color: var(--color-charcoal);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            width: 100%;
+            background-color: var(--color-paper);
+            border-bottom: 1px solid var(--color-border);
+            padding: 30px 0;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .logo-container {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .logo-main {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 56px;
+            color: var(--color-charcoal);
+            letter-spacing: -2px;
+            line-height: 1;
+        }
+        .logo-labels {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 56px;
+            padding-top: 4px;
+            padding-bottom: 2px;
+        }
+        .logo-labels span {
+            font-size: 8px;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+            color: var(--color-charcoal);
+            line-height: 1;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            color: var(--color-charcoal);
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: var(--color-charcoal-light);
+            font-size: 14px;
+            margin-bottom: 40px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .stat-card {
+            background: var(--color-paper);
+            padding: 25px;
+            border-radius: 8px;
+            border-top: 4px solid var(--color-accent-gold);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .stat-value {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--color-accent-gold);
+            margin-bottom: 5px;
+        }
+        .stat-label {
+            font-size: 13px;
+            color: var(--color-charcoal-light);
+        }
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 30px;
+        }
+        .chart-card {
+            background: var(--color-paper);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--color-accent-gold);
+        }
+        .chart-card.full { grid-column: 1 / -1; }
+        .chart-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--color-charcoal);
+        }
+        canvas { max-height: 400px; }
+        @media (max-width: 768px) {
+            .charts-grid { grid-template-columns: 1fr; }
+            .chart-card.full { grid-column: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <h1 class="logo-main">S.H.I.T</h1>
+            <div class="logo-labels">
+                <span>SCIENCES</span>
+                <span>HUMANITIES</span>
+                <span>INFORMATION</span>
+                <span>TECHNOLOGY</span>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <h1>💩 粪坑数据观测站</h1>
+        <div class="subtitle">学术蝗虫排泄行为可视化分析 | 用数学的严谨，守护思想的粪坑</div>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value" id="totalArticles">-</div>
+                <div class="stat-label">💩 总排泄量</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="totalAuthors">-</div>
+                <div class="stat-label">🦗 学术蝗虫数</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="dateRange">-</div>
+                <div class="stat-label">⏱️ 发酵天数</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="avgDaily">-</div>
+                <div class="stat-label">📊 日均排泄率</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="avgAuthor">-</div>
+                <div class="stat-label">🎯 人均产量</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="totalViews">-</div>
+                <div class="stat-label">💬 总评论数</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="avgRating">-</div>
+                <div class="stat-label">⭐ 平均粘度</div>
+            </div>
+        </div>
+        <div class="chart-card full" style="max-width: 900px; margin: 0 auto 40px;">
+            <div class="chart-title">🔥 旷古烁今构思热词榜</div>
+            <canvas id="wordcloudChart" width="800" height="400"></canvas>
+        </div>
+        <div class="charts-grid">
+            <div class="chart-card">
+                <div class="chart-title">🚽 发酵区分布态势</div>
+                <canvas id="zoneChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <div class="chart-title">📚 学科蝗灾分布图</div>
+                <canvas id="disciplineChart"></canvas>
+            </div>
+            <div class="chart-card full">
+                <div class="chart-title">📈 每日排泄活跃度</div>
+                <canvas id="trendChart"></canvas>
+            </div>
+            <div class="chart-card full">
+                <div class="chart-title">🌊 各发酵区时间演化</div>
+                <canvas id="zoneTimeChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <div class="chart-title">🎨 发酵区-学科交叉污染</div>
+                <canvas id="crossChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <div class="chart-title">⏰ 排泄者作息规律</div>
+                <canvas id="hourChart"></canvas>
+            </div>
+            <div class="chart-card full">
+                <div class="chart-title">🏆 Top 15 高产排泄者</div>
+                <canvas id="authorChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <div class="chart-title">📅 周排泄习惯分析</div>
+                <canvas id="weekdayChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <div class="chart-title">📊 月度发酵统计</div>
+                <canvas id="monthChart"></canvas>
+            </div>
+            <div class="chart-card full">
+                <div class="chart-title">🏅 Top 20 高粘度构思（贝叶斯评分）</div>
+                <canvas id="topRatedChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <div class="chart-title">📊 粘度分布直方图</div>
+                <canvas id="ratingDistChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <div class="chart-title">🔥 评论数 Top 15</div>
+                <canvas id="topViewsChart"></canvas>
+            </div>
+            <div class="chart-card full">
+                <div class="chart-title">💎 粘度 vs 评论数散点图</div>
+                <canvas id="scatterChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <div class="chart-title">👃 嗅探者活跃度分布</div>
+                <canvas id="ratingCountChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <div class="chart-title">🎯 各分区平均粘度对比</div>
+                <canvas id="zoneRatingChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <script>
+        const zoneNames = {latrine: '🚽旱厕', septic: '🧪化粪池', stone: '🪨构石', sediment: '🕳️沉淀区'};
+        const disciplineNames = {medical: '医学', interdisciplinary: '交叉学科', humanities: '人文', engineering: '工程', science: '理学', agriculture: '农学', law_social: '法社'};
+
+        fetch('scraped_articles.json')
+            .then(r => r.json())
+            .then(data => {
+                const articles = Object.values(data.articles);
+                const authors = new Set(articles.map(a => a.author_name));
+                const dates = articles.map(a => new Date(a.created_at));
+                const minDate = new Date(Math.min(...dates));
+                const maxDate = new Date(Math.max(...dates));
+                const daysDiff = Math.ceil((maxDate - minDate) / (1000 * 60 * 60 * 24)) + 1;
+
+                const totalViews = articles.reduce((sum, a) => sum + (a.comment_count || 0), 0);
+                const avgRating = articles.filter(a => a.weighted_score).reduce((sum, a) => sum + a.weighted_score, 0) / articles.filter(a => a.weighted_score).length;
+
+                document.getElementById('totalArticles').textContent = articles.length;
+                document.getElementById('totalAuthors').textContent = authors.size;
+                document.getElementById('dateRange').textContent = daysDiff;
+                document.getElementById('avgDaily').textContent = (articles.length / daysDiff).toFixed(1);
+                document.getElementById('avgAuthor').textContent = (articles.length / authors.size).toFixed(1);
+                document.getElementById('totalViews').textContent = totalViews.toLocaleString();
+                document.getElementById('avgRating').textContent = avgRating.toFixed(2);
+
+                // 分区分布
+                const zones = {};
+                articles.forEach(a => zones[a.zone] = (zones[a.zone] || 0) + 1);
+                new Chart(document.getElementById('zoneChart'), {
+                    type: 'doughnut',
+                    data: {
+                        labels: Object.keys(zones).map(z => zoneNames[z] || z),
+                        datasets: [{
+                            data: Object.values(zones),
+                            backgroundColor: ['#b18e26', '#2c3e50', '#4a5568', '#94a3b8']
+                        }]
+                    },
+                    options: {responsive: true, maintainAspectRatio: true}
+                });
+
+                // 学科分布
+                const disciplines = {};
+                articles.forEach(a => disciplines[a.discipline] = (disciplines[a.discipline] || 0) + 1);
+                new Chart(document.getElementById('disciplineChart'), {
+                    type: 'bar',
+                    data: {
+                        labels: Object.keys(disciplines).map(d => disciplineNames[d] || d),
+                        datasets: [{
+                            label: '文章数',
+                            data: Object.values(disciplines),
+                            backgroundColor: '#b18e26'
+                        }]
+                    },
+                    options: {responsive: true, maintainAspectRatio: true}
+                });
+
+                // 每日趋势
+                const dailyCounts = {};
+                articles.forEach(a => {
+                    const date = new Date(a.created_at).toISOString().split('T')[0];
+                    dailyCounts[date] = (dailyCounts[date] || 0) + 1;
+                });
+                const sortedDates = Object.keys(dailyCounts).sort();
+                new Chart(document.getElementById('trendChart'), {
+                    type: 'line',
+                    data: {
+                        labels: sortedDates,
+                        datasets: [{
+                            label: '每日发文量',
+                            data: sortedDates.map(d => dailyCounts[d]),
+                            borderColor: '#b18e26',
+                            backgroundColor: 'rgba(177, 142, 38, 0.1)',
+                            fill: true,
+                            tension: 0.3
+                        }]
+                    },
+                    options: {responsive: true, maintainAspectRatio: true}
+                });
+
+                // 分区时间分布
+                const zoneByDate = {};
+                articles.forEach(a => {
+                    const date = new Date(a.created_at).toISOString().split('T')[0];
+                    if (!zoneByDate[a.zone]) zoneByDate[a.zone] = {};
+                    zoneByDate[a.zone][date] = (zoneByDate[a.zone][date] || 0) + 1;
+                });
+                const colors = {'latrine': '#b18e26', 'septic': '#2c3e50', 'stone': '#4a5568', 'sediment': '#94a3b8'};
+                new Chart(document.getElementById('zoneTimeChart'), {
+                    type: 'line',
+                    data: {
+                        labels: sortedDates,
+                        datasets: Object.keys(zoneByDate).map(zone => ({
+                            label: zoneNames[zone] || zone,
+                            data: sortedDates.map(d => zoneByDate[zone][d] || 0),
+                            borderColor: colors[zone],
+                            fill: false,
+                            tension: 0.3
+                        }))
+                    },
+                    options: {responsive: true, maintainAspectRatio: true}
+                });
+
+                // 分区-学科交叉
+                const cross = {};
+                articles.forEach(a => {
+                    const key = `${zoneNames[a.zone]}-${disciplineNames[a.discipline] || a.discipline}`;
+                    cross[key] = (cross[key] || 0) + 1;
+                });
+                const crossEntries = Object.entries(cross).sort((a,b) => b[1] - a[1]).slice(0, 10);
+                new Chart(document.getElementById('crossChart'), {
+                    type: 'bar',
+                    data: {
+                        labels: crossEntries.map(e => e[0]),
+                        datasets: [{label: '文章数', data: crossEntries.map(e => e[1]), backgroundColor: '#2c3e50'}]
+                    },
+                    options: {indexAxis: 'y', responsive: true, maintainAspectRatio: true}
+                });
+
+                // 时段分布
+                const hours = {};
+                articles.forEach(a => {
+                    const h = new Date(a.created_at).getHours();
+                    hours[h] = (hours[h] || 0) + 1;
+                });
+                new Chart(document.getElementById('hourChart'), {
+                    type: 'bar',
+                    data: {
+                        labels: Array.from({length: 24}, (_, i) => i + '时'),
+                        datasets: [{label: '发文量', data: Array.from({length: 24}, (_, i) => hours[i] || 0), backgroundColor: '#b18e26'}]
+                    },
+                    options: {responsive: true, maintainAspectRatio: true}
+                });
+
+                // Top作者
+                const authorCounts = {};
+                articles.forEach(a => authorCounts[a.author_name] = (authorCounts[a.author_name] || 0) + 1);
+                const topAuthors = Object.entries(authorCounts).sort((a, b) => b[1] - a[1]).slice(0, 15);
+                new Chart(document.getElementById('authorChart'), {
+                    type: 'bar',
+                    data: {
+                        labels: topAuthors.map(a => a[0]),
+                        datasets: [{label: '发文量', data: topAuthors.map(a => a[1]), backgroundColor: '#2c3e50'}]
+                    },
+                    options: {indexAxis: 'y', responsive: true, maintainAspectRatio: true}
+                });
+
+                // 周分布
+                const weekdays = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
+                const weekdayCounts = {};
+                articles.forEach(a => {
+                    const day = new Date(a.created_at).getDay();
+                    weekdayCounts[day] = (weekdayCounts[day] || 0) + 1;
+                });
+                new Chart(document.getElementById('weekdayChart'), {
+                    type: 'bar',
+                    data: {
+                        labels: weekdays,
+                        datasets: [{label: '发文量', data: weekdays.map((_, i) => weekdayCounts[i] || 0), backgroundColor: '#b18e26'}]
+                    },
+                    options: {responsive: true, maintainAspectRatio: true}
+                });
+
+                // 月度统计
+                const months = {};
+                articles.forEach(a => {
+                    const month = new Date(a.created_at).toISOString().slice(0, 7);
+                    months[month] = (months[month] || 0) + 1;
+                });
+                const sortedMonths = Object.keys(months).sort();
+                new Chart(document.getElementById('monthChart'), {
+                    type: 'bar',
+                    data: {
+                        labels: sortedMonths,
+                        datasets: [{label: '发文量', data: sortedMonths.map(m => months[m]), backgroundColor: '#2c3e50'}]
+                    },
+                    options: {responsive: true, maintainAspectRatio: true}
+                });
+
+                // Top 20 高粘度
+                const topRated = articles.filter(a => a.weighted_score).sort((a, b) => b.weighted_score - a.weighted_score).slice(0, 20);
+                new Chart(document.getElementById('topRatedChart'), {
+                    type: 'bar',
+                    data: {
+                        labels: topRated.map(a => a.manuscript_title.slice(0, 30) + '...'),
+                        datasets: [{label: '粘度', data: topRated.map(a => a.weighted_score), backgroundColor: '#b18e26'}]
+                    },
+                    options: {indexAxis: 'y', responsive: true, maintainAspectRatio: true}
+                });
+
+                // 粘度分布
+                const ratingDist = [0, 0, 0, 0, 0];
+                articles.forEach(a => {
+                    if (a.weighted_score >= 0 && a.weighted_score < 1) ratingDist[0]++;
+                    else if (a.weighted_score >= 1 && a.weighted_score < 2) ratingDist[1]++;
+                    else if (a.weighted_score >= 2 && a.weighted_score < 3) ratingDist[2]++;
+                    else if (a.weighted_score >= 3 && a.weighted_score < 4) ratingDist[3]++;
+                    else if (a.weighted_score >= 4) ratingDist[4]++;
+                });
+                new Chart(document.getElementById('ratingDistChart'), {
+                    type: 'bar',
+                    data: {
+                        labels: ['0-1分', '1-2分', '2-3分', '3-4分', '4-5分'],
+                        datasets: [{label: '文章数', data: ratingDist, backgroundColor: '#2c3e50'}]
+                    },
+                    options: {responsive: true, maintainAspectRatio: true}
+                });
+
+                // 浏览量Top 15
+                const topViews = articles.filter(a => a.comment_count).sort((a, b) => b.comment_count - a.comment_count).slice(0, 15);
+                new Chart(document.getElementById('topViewsChart'), {
+                    type: 'bar',
+                    data: {
+                        labels: topViews.map(a => a.manuscript_title.slice(0, 25) + '...'),
+                        datasets: [{label: '评论数', data: topViews.map(a => a.comment_count), backgroundColor: '#b18e26'}]
+                    },
+                    options: {indexAxis: 'y', responsive: true, maintainAspectRatio: true}
+                });
+
+                // 散点图
+                const scatterData = articles.filter(a => a.weighted_score && a.comment_count).map(a => ({x: a.comment_count, y: a.weighted_score}));
+                new Chart(document.getElementById('scatterChart'), {
+                    type: 'scatter',
+                    data: {datasets: [{label: '粘度 vs 评论数', data: scatterData, backgroundColor: 'rgba(177, 142, 38, 0.5)'}]},
+                    options: {responsive: true, scales: {x: {title: {display: true, text: '评论数'}}, y: {title: {display: true, text: '粘度'}}}}
+                });
+
+                // 嗅探者活跃度
+                const ratingCountDist = [0, 0, 0, 0, 0];
+                articles.forEach(a => {
+                    const rc = a.rating_count || 0;
+                    if (rc === 0) ratingCountDist[0]++;
+                    else if (rc <= 5) ratingCountDist[1]++;
+                    else if (rc <= 10) ratingCountDist[2]++;
+                    else if (rc <= 20) ratingCountDist[3]++;
+                    else ratingCountDist[4]++;
+                });
+                new Chart(document.getElementById('ratingCountChart'), {
+                    type: 'bar',
+                    data: {
+                        labels: ['0次', '1-5次', '6-10次', '11-20次', '20+次'],
+                        datasets: [{label: '文章数', data: ratingCountDist, backgroundColor: '#2c3e50'}]
+                    },
+                    options: {responsive: true, maintainAspectRatio: true}
+                });
+
+                // 各分区平均粘度
+                const zoneRatings = {};
+                Object.keys(zones).forEach(z => {
+                    const zoneArts = articles.filter(a => a.zone === z && a.weighted_score);
+                    zoneRatings[z] = zoneArts.length ? zoneArts.reduce((s, a) => s + a.weighted_score, 0) / zoneArts.length : 0;
+                });
+                new Chart(document.getElementById('zoneRatingChart'), {
+                    type: 'bar',
+                    data: {
+                        labels: Object.keys(zoneRatings).map(z => zoneNames[z] || z),
+                        datasets: [{label: '平均粘度', data: Object.values(zoneRatings), backgroundColor: '#b18e26'}]
+                    },
+                    options: {responsive: true, maintainAspectRatio: true}
+                });
+
+                // 标题词云
+                const stopWords = new Set(['的', '与', '和', '在', '对', '及', '中', '基于', '研究', 'THE', 'OF', 'AND', 'IN', 'A', 'ON']);
+                const wordFreq = {};
+                articles.forEach(a => {
+                    const words = a.manuscript_title.match(/[\u4e00-\u9fa5]+|[a-zA-Z]+/g) || [];
+                    words.forEach(w => {
+                        if (w.length > 1 && !stopWords.has(w.toUpperCase())) {
+                            wordFreq[w] = (wordFreq[w] || 0) + 1;
+                        }
+                    });
+                });
+                const wordList = Object.entries(wordFreq).map(([word, freq]) => [word, freq * 10]);
+                WordCloud(document.getElementById('wordcloudChart'), {
+                    list: wordList,
+                    gridSize: 8,
+                    weightFactor: 3,
+                    fontFamily: 'Noto Serif SC, sans-serif',
+                    color: () => ['#b18e26', '#2c3e50', '#4a5568'][Math.floor(Math.random() * 3)],
+                    rotateRatio: 0.3,
+                    backgroundColor: '#ffffff'
+                });
+            });
+    </script>
+</body>
+</html>

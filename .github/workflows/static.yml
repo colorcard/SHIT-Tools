@@ -38,7 +38,9 @@ jobs:
       - name: Prepare site
         run: |
           mkdir site
-          cp shitjournal_downloader.html site/index.html
+          cp docs/shitjournal_downloader.html site/index.html
+          cp docs/analysis.html site/analysis.html
+          cp data/scraped_articles.json site/scraped_articles.json
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
