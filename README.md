@@ -3,6 +3,8 @@
 S.H.I.T Journal Downloader 是一套用于从 [S.H.I.T Journal](https://shitjournal.org) 安全、快速地下载预印本 PDF 文件的工具集。包含一个功能全面的 **Python 自动化脚本** 以及一个仿官方极简设计的 **Web 网页工具**。
 > [!TIP]
 > 快速访问使用：https://colorcard.github.io/SHIT-PDF-Downloader/
+>
+> 国内访问使用：https://shitpdf.pages.dev/
 
 
 ## 🔬 原理说明
