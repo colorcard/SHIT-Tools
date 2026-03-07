@@ -2,6 +2,7 @@ import requests
 import json
 import os
 import re
+import argparse
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -101,7 +102,7 @@ def check_missing_downloads(output_dir="downloads"):
 
     return missing
 
-def scrape_all_zones():
+def scrape_all_zones(skip_download=False):
     data = load_existing_data()
     existing_ids = set(data["articles"].keys())
     new_articles = []
@@ -125,6 +126,10 @@ def scrape_all_zones():
     save_data(data)
     print(f"\n[*] 爬取完成！新增 {len(new_articles)} 篇，更新 {updated} 篇，总计 {len(data['articles'])} 篇")
 
+    if skip_download:
+        print("[*] 跳过PDF下载（--no-download模式）")
+        return
+
     # 检查缺失的下载
     missing = check_missing_downloads()
     if missing:
@@ -147,4 +152,7 @@ def scrape_all_zones():
         print(f"\n[*] 下载完成！成功 {success}/{len(new_articles)} 篇")
 
 if __name__ == "__main__":
-    scrape_all_zones()
+    parser = argparse.ArgumentParser(description="S.H.I.T Journal 文章爬虫")
+    parser.add_argument("--no-download", action="store_true", help="只爬取数据，跳过PDF下载")
+    args = parser.parse_args()
+    scrape_all_zones(skip_download=args.no_download)
