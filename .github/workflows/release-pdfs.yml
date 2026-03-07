@@ -1,0 +1,68 @@
+name: Release PDFs
+
+on:
+  workflow_run:
+    workflows: ["Update Data"]
+    types:
+      - completed
+
+permissions:
+  contents: write
+
+jobs:
+  release-pdfs:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download previous release
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release download latest -p "shit-pdfs.zip" || echo "No previous release found"
+
+      - name: Extract previous PDFs
+        continue-on-error: true
+        run: |
+          if [ -f shit-pdfs.zip ]; then
+            unzip -q shit-pdfs.zip
+            echo "Restored $(find downloads -name '*.pdf' | wc -l) PDFs from previous release"
+          fi
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Download PDFs (incremental)
+        run: |
+          python src/scraper.py
+          echo "Total PDFs: $(find downloads -name '*.pdf' | wc -l)"
+
+      - name: Package PDFs
+        run: |
+          zip -r shit-pdfs.zip downloads/
+          echo "Package size: $(du -h shit-pdfs.zip | cut -f1)"
+
+      - name: Delete old release
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete latest --yes || echo "No previous release to delete"
+
+      - name: Create new release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create latest shit-pdfs.zip \
+            --title "Latest PDFs" \
+            --notes "自动更新于 $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
