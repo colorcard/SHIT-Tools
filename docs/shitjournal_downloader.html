@@ -35,39 +35,51 @@
             width: 100%;
             background-color: var(--color-paper);
             border-bottom: 1px solid var(--color-border);
-            padding: 20px 40px;
+            padding: 30px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
 
-        .logo-text {
+        .logo-container {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .logo-main {
             font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            font-size: 28px;
+            font-weight: 900;
+            font-size: 56px;
             color: var(--color-charcoal);
-            text-decoration: none;
-            letter-spacing: 1px;
+            letter-spacing: -2px;
+            line-height: 1;
+            margin: 0;
         }
 
-        .logo-text span {
-            color: var(--color-accent-gold);
+        .logo-labels {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 56px;
+            padding-top: 4px;
+            padding-bottom: 2px;
         }
 
-        .header-btn {
-            padding: 10px 20px;
-            background-color: var(--color-accent-gold);
-            color: white;
+        .logo-labels span {
+            font-size: 8px;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+            color: var(--color-charcoal);
+            line-height: 1;
+        }
+
+        .header-link {
             text-decoration: none;
-            border-radius: 4px;
+            color: var(--color-charcoal);
             font-weight: 600;
             font-size: 14px;
-            transition: background-color 0.3s;
-        }
-
-        .header-btn:hover {
-            background-color: var(--color-accent-gold-hover);
         }
 
         .container {
@@ -303,8 +315,10 @@
 
         @media (max-width: 768px) {
             header { padding: 15px 20px; }
-            .logo-text { font-size: 22px; }
-            .header-btn { padding: 8px 16px; font-size: 13px; }
+            .logo-main { font-size: 40px; }
+            .logo-labels { height: 40px; }
+            .logo-labels span { font-size: 6px; }
+            .header-link { font-size: 13px; }
             .container { padding: 25px; margin: 20px 15px; }
             h1 { font-size: 22px; }
             .subtitle { font-size: 13px; }
@@ -316,9 +330,17 @@
 </head>
 <body>
     <header>
-        <a href="analysis.html" class="header-btn">📊 数据分析</a>
-        <a href="#" class="logo-text">S.H.I.T. <span>Journal</span></a>
-        <div style="width: 120px;"></div>
+        <div style="width: 100px;"></div>
+        <div class="logo-container">
+            <h1 class="logo-main">S.H.I.T</h1>
+            <div class="logo-labels">
+                <span>SCIENCES</span>
+                <span>HUMANITIES</span>
+                <span>INFORMATION</span>
+                <span>TECHNOLOGY</span>
+            </div>
+        </div>
+        <a href="analysis.html" class="header-link">观测站 →</a>
     </header>
 
     <div class="container">
