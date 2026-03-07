@@ -1,8 +1,8 @@
 # 💩 S.H.I.T Journal 工具集
 
 一套用于 [S.H.I.T Journal](https://shitjournal.org) 的数据采集、下载和可视化分析工具。
-
-> **在线访问**: https://colorcard.github.io/SHIT-PDF-Downloader/
+>[!TIP]
+> **在线单文件下载**: https://colorcard.github.io/SHIT-PDF-Downloader/
 >
 > **下载全部PDF**: https://github.com/colorcard/SHIT-PDF-Downloader/releases/tag/latest
 
