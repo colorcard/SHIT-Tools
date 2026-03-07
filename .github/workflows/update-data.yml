@@ -2,7 +2,7 @@ name: Update Data
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # 每天UTC 00:00运行
+    - cron: '0 20 * * *'  # 每天中国时间 04:00 运行
   workflow_dispatch:  # 允许手动触发
 
 permissions:
