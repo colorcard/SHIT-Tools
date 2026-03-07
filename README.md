@@ -80,3 +80,9 @@ python shitjournal_downloader.py -h
 1. 使用电脑中任意现代浏览器（Chrome、Edge、Safari 等）直接双击打开 `shitjournal_downloader.html`。
 2. 在输入框内粘贴带 UUID 的论文网址。
 3. 按下回车或点击“Generate Direct Link”，等待处理完成后点击生成的醒目按钮即可保存 PDF。
+
+---
+
+## 开源协议
+
+本项目采用 [MIT](LICENSE) 许可证开源，欢迎任何形式的使用、修改和分发。请保留原作者信息，并在适当位置注明本项目的来源。
