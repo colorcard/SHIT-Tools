@@ -5,10 +5,10 @@
 **[S.H.I.T Journal](https://shitjournal.org) 数据采集、下载与可视化分析的完整工具套件**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub release](https://img.shields.io/github/v/release/colorcard/SHIT-PDF-Downloader)](https://github.com/colorcard/SHIT-PDF-Downloader/releases)
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Fcolorcard.github.io%2FSHIT-PDF-Downloader%2F)](https://colorcard.github.io/SHIT-PDF-Downloader/)
+[![GitHub release](https://img.shields.io/github/v/release/colorcard/SHIT-PDF-Downloader)](https://github.com/colorcard/SHIT-Tools/releases)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fcolorcard.github.io%2FSHIT-PDF-Downloader%2F)](https://shit.colorcard.cc/)
 
-[🌐 在线下载器](https://colorcard.github.io/SHIT-PDF-Downloader/) • [📊 数据观测站](https://colorcard.github.io/SHIT-PDF-Downloader/analysis.html) • [📦 批量下载](https://github.com/colorcard/SHIT-PDF-Downloader/releases/tag/latest)
+[🌐 在线下载器](https://shit.colorcard.cc/) • [📊 数据观测站](https://shit.colorcard.cc/analysis.html) • [📦 批量下载](https://github.com/colorcard/SHIT-Tools/releases/tag/latest)
 
 </div>
 
@@ -31,17 +31,17 @@
 
 **单文件下载：**
 ```
-https://colorcard.github.io/SHIT-PDF-Downloader/
+https://shit.colorcard.cc/
 ```
 
 **数据分析：**
 ```
-https://colorcard.github.io/SHIT-PDF-Downloader/analysis.html
+https://shit.colorcard.cc/analysis.html
 ```
 
 **批量下载（所有 PDF）：**
 ```
-https://github.com/colorcard/SHIT-PDF-Downloader/releases/tag/latest
+https://github.com/colorcard/SHIT-Tools/releases/tag/latest
 ```
 
 ### 命令行工具
@@ -65,7 +65,7 @@ python src/shitjournal_downloader.py -f urls.txt -o ./pdfs/
 ## 📁 项目结构
 
 ```
-SHIT-PDF-Downloader/
+SHIT-Tools/
 ├── src/
 │   ├── scraper.py                    # 多线程数据爬虫
 │   └── shitjournal_downloader.py     # 命令行 PDF 下载器
@@ -93,7 +93,7 @@ SHIT-PDF-Downloader/
 - 响应式设计：完美适配手机、平板、桌面
 
 **使用方法：**
-1. 访问 [在线下载器](https://colorcard.github.io/SHIT-PDF-Downloader/)
+1. 访问 [在线下载器](https://shit.colorcard.cc/)
 2. 选择"直接下载"或"检索下载"标签页
 3. 输入 UUID/URL 或搜索文章
 4. 点击下载按钮
@@ -313,6 +313,6 @@ python src/scraper.py
 
 **用数学的严谨，守护思想的粪坑 💩**
 
-[报告问题](https://github.com/colorcard/SHIT-PDF-Downloader/issues) • [功能建议](https://github.com/colorcard/SHIT-PDF-Downloader/issues)
+[报告问题](https://github.com/colorcard/SHIT-Tools/issues) • [功能建议](https://github.com/colorcard/SHIT-Tools/issues)
 
 </div>
