@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S.H.I.T Journal | PDF Fetcher</title>
+    <title>S.H.I.T Journal | PDF 下载器</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Serif+SC:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -20,9 +20,9 @@
             --color-success: #2f855a;
         }
 
-        body { 
-            font-family: 'Inter', 'Noto Serif SC', sans-serif; 
-            background-color: var(--color-bg); 
+        body {
+            font-family: 'Inter', 'Noto Serif SC', sans-serif;
+            background-color: var(--color-bg);
             color: var(--color-charcoal);
             margin: 0;
             display: flex;
@@ -35,8 +35,10 @@
             width: 100%;
             background-color: var(--color-paper);
             border-bottom: 1px solid var(--color-border);
-            padding: 20px 0;
-            text-align: center;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
 
@@ -53,22 +55,37 @@
             color: var(--color-accent-gold);
         }
 
-        .container { 
-            background-color: var(--color-paper); 
-            padding: 50px 40px; 
-            border-radius: 8px; 
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -2px rgba(0,0,0,0.05); 
+        .header-btn {
+            padding: 10px 20px;
+            background-color: var(--color-accent-gold);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .header-btn:hover {
+            background-color: var(--color-accent-gold-hover);
+        }
+
+        .container {
+            background-color: var(--color-paper);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -2px rgba(0,0,0,0.05);
             width: 100%;
-            max-width: 550px;
-            margin: 60px 20px;
+            max-width: 900px;
+            margin: 40px 20px;
             border-top: 4px solid var(--color-accent-gold);
             box-sizing: border-box;
         }
 
-        h1 { 
+        h1 {
             font-family: 'Playfair Display', serif;
-            text-align: center; 
-            color: var(--color-charcoal); 
+            text-align: center;
+            color: var(--color-charcoal);
             margin-top: 0;
             font-size: 26px;
             font-weight: 700;
@@ -79,73 +96,112 @@
             text-align: center;
             color: var(--color-charcoal-light);
             font-size: 14px;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             font-weight: 300;
         }
 
-        .form-group { margin-bottom: 25px; }
-        
-        label { 
-            display: block; 
-            margin-bottom: 10px; 
-            font-weight: 600; 
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--color-border);
+        }
+
+        .tab {
+            padding: 12px 24px;
+            background: none;
+            border: none;
+            border-bottom: 3px solid transparent;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--color-charcoal-light);
+            transition: all 0.3s;
+            margin-bottom: -2px;
+        }
+
+        .tab.active {
+            color: var(--color-accent-gold);
+            border-bottom-color: var(--color-accent-gold);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
             color: var(--color-charcoal);
             font-size: 13px;
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
 
-        input[type="text"] { 
-            width: 100%; 
-            padding: 14px 16px; 
-            border: 1px solid var(--color-border); 
-            border-radius: 4px; 
-            box-sizing: border-box; 
-            font-size: 15px; 
+        input[type="text"], select {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
             font-family: inherit;
             transition: all 0.3s ease;
             background-color: var(--color-bg);
         }
 
-        input[type="text"]:focus {
+        input[type="text"]:focus, select:focus {
             border-color: var(--color-accent-gold);
             outline: none;
             box-shadow: 0 0 0 1px var(--color-accent-gold);
             background-color: var(--color-paper);
         }
 
-        button { 
-            width: 100%; 
-            padding: 14px; 
-            background-color: var(--color-charcoal); 
-            color: white; 
-            border: none; 
-            border-radius: 4px; 
-            font-size: 15px; 
+        .search-filters {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--color-charcoal);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
             font-weight: 600;
             font-family: inherit;
             letter-spacing: 0.05em;
-            cursor: pointer; 
-            transition: all 0.3s ease; 
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
 
         button:hover { background-color: #1a252f; }
-        button:active { transform: translateY(1px); }
-        button:disabled { 
-            background-color: var(--color-border); 
+        button:disabled {
+            background-color: var(--color-border);
             color: var(--color-charcoal-light);
-            cursor: not-allowed; 
-            transform: none;
+            cursor: not-allowed;
         }
 
-        #status { 
-            margin-top: 25px; 
-            padding: 16px; 
-            border-radius: 4px; 
-            display: none; 
-            font-size: 14px;
+        #status {
+            margin-top: 20px;
+            padding: 14px;
+            border-radius: 4px;
+            display: none;
+            font-size: 13px;
             line-height: 1.6;
-            white-space: pre-line;
             border-left: 4px solid;
             font-weight: 500;
         }
@@ -155,35 +211,81 @@
         .info { background-color: #f8fafc; color: var(--color-charcoal-light); border-left-color: var(--color-accent-gold) !important; }
 
         #result {
-            text-align: center; 
+            text-align: center;
             display: none;
-            margin-top: 25px;
+            margin-top: 20px;
         }
 
-        #download-link { 
-            display: inline-block; 
+        #download-link {
+            display: inline-block;
             width: 100%;
             box-sizing: border-box;
-            padding: 14px; 
-            background-color: var(--color-accent-gold); 
-            color: white; 
-            text-decoration: none; 
-            border-radius: 4px; 
+            padding: 12px;
+            background-color: var(--color-accent-gold);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
             font-weight: 600;
-            font-family: inherit;
-            transition: background-color 0.3s; 
+            transition: background-color 0.3s;
             letter-spacing: 0.05em;
-            text-transform: uppercase;
         }
 
         #download-link:hover { background-color: var(--color-accent-gold-hover); }
 
-        .hint {
-            font-size: 13px;
-            color: var(--color-charcoal-light);
-            margin-top: 8px;
+        .results-list {
+            margin-top: 20px;
+            max-height: 500px;
+            overflow-y: auto;
         }
-        
+
+        .article-item {
+            padding: 15px;
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .article-item:hover {
+            border-color: var(--color-accent-gold);
+            background-color: var(--color-bg);
+        }
+
+        .article-title {
+            font-weight: 600;
+            color: var(--color-charcoal);
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .article-meta {
+            font-size: 12px;
+            color: var(--color-charcoal-light);
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .zone-latrine { background-color: #fef3c7; color: #92400e; }
+        .zone-septic { background-color: #dbeafe; color: #1e40af; }
+        .zone-stone { background-color: #fce7f3; color: #9f1239; }
+        .zone-sediment { background-color: #d1fae5; color: #065f46; }
+
+        .hint {
+            font-size: 12px;
+            color: var(--color-charcoal-light);
+            margin-top: 6px;
+        }
+
         footer {
             margin-top: auto;
             padding: 30px;
@@ -191,42 +293,192 @@
             font-size: 13px;
             color: var(--color-charcoal-light);
         }
+
+        .stats {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 13px;
+            color: var(--color-charcoal-light);
+        }
     </style>
 </head>
 <body>
     <header>
+        <a href="analysis.html" class="header-btn">📊 数据分析</a>
         <a href="#" class="logo-text">S.H.I.T. <span>Journal</span></a>
+        <div style="width: 120px;"></div>
     </header>
 
     <div class="container">
-        <h1>Document Fetcher</h1>
-        <div class="subtitle">Securely access preprint manuscripts</div>
-        
-        <div class="form-group">
-            <label for="url">Preprint URL / UUID</label>
-            <input type="text" id="url" placeholder="e.g. https://shitjournal.org/preprints/b9cff339-..." autocomplete="off" spellcheck="false">
-            <div class="hint">Paste the full URL or the document UUID.</div>
-        </div>
-        
-        <button id="downloadBtn" onclick="processDownload()">Generate Direct Link</button>
+        <h1>PDF 下载器</h1>
+        <div class="subtitle">检索并下载预印本文献</div>
 
-        <div id="status"></div>
-        <div id="result">
-            <a id="download-link" href="#" target="_blank" download>Download PDF Document</a>
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('direct')">直接下载</button>
+            <button class="tab" onclick="switchTab('search')">检索下载</button>
         </div>
 
-        <div style="margin-top: 30px; text-align: center;">
-            <a href="analysis.html" style="display: inline-block; padding: 12px 24px; background-color: var(--color-accent-gold); color: white; text-decoration: none; border-radius: 4px; font-weight: 600; transition: background-color 0.3s;">📊 数据分析仪表板</a>
+        <div id="direct-tab" class="tab-content active">
+            <div class="form-group">
+                <label for="url">预印本 URL / UUID</label>
+                <input type="text" id="url" placeholder="例如: https://shitjournal.org/preprints/b9cff339-..." autocomplete="off" spellcheck="false">
+                <div class="hint">粘贴完整 URL 或文档 UUID</div>
+            </div>
+
+            <button id="downloadBtn" onclick="processDownload()">生成下载链接</button>
+
+            <div id="status"></div>
+            <div id="result">
+                <a id="download-link" href="#" target="_blank" download>下载 PDF 文档</a>
+            </div>
+        </div>
+
+        <div id="search-tab" class="tab-content">
+            <div class="stats" id="stats">加载中...</div>
+
+            <div class="form-group">
+                <label for="keyword">关键词搜索</label>
+                <input type="text" id="keyword" placeholder="搜索标题、作者..." oninput="searchArticles()">
+            </div>
+
+            <div class="search-filters">
+                <div class="form-group">
+                    <label for="zone-filter">发酵区</label>
+                    <select id="zone-filter" onchange="searchArticles()">
+                        <option value="">全部</option>
+                        <option value="latrine">旱厕</option>
+                        <option value="septic">化粪池</option>
+                        <option value="stone">构石</option>
+                        <option value="sediment">沉淀区</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="discipline-filter">学科</label>
+                    <select id="discipline-filter" onchange="searchArticles()">
+                        <option value="">全部</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="sort">排序方式</label>
+                <select id="sort" onchange="searchArticles()">
+                    <option value="date">最新发布</option>
+                    <option value="score">粘度最高</option>
+                    <option value="comments">评论最多</option>
+                </select>
+            </div>
+
+            <div class="results-list" id="results"></div>
         </div>
     </div>
 
     <footer>
-        &copy; 2024 S.H.I.T Journal Archiver. For educational purposes only.
+        &copy; 2024 S.H.I.T Journal Archiver. 仅供学习交流使用
     </footer>
 
     <script>
         const SUPABASE_URL = "https://bcgdqepzakcufaadgnda.supabase.co";
         const SUPABASE_KEY = "sb_publishable_wHqWLjQwO2lMwkGLeBktng_Mk_xf5xd";
+        let articlesData = null;
+
+        const zoneNames = {
+            latrine: '旱厕',
+            septic: '化粪池',
+            stone: '构石',
+            sediment: '沉淀区'
+        };
+
+        async function loadArticles() {
+            try {
+                const response = await fetch('scraped_articles.json');
+                const data = await response.json();
+                articlesData = Object.values(data.articles);
+
+                const disciplines = [...new Set(articlesData.map(a => a.discipline))].sort();
+                const disciplineSelect = document.getElementById('discipline-filter');
+                disciplines.forEach(d => {
+                    const option = document.createElement('option');
+                    option.value = d;
+                    option.textContent = d;
+                    disciplineSelect.appendChild(option);
+                });
+
+                document.getElementById('stats').textContent = `共收录 ${articlesData.length} 篇预印本`;
+                searchArticles();
+            } catch (err) {
+                document.getElementById('stats').textContent = '数据加载失败';
+            }
+        }
+
+        function switchTab(tab) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+            if (tab === 'direct') {
+                document.querySelector('.tab:nth-child(1)').classList.add('active');
+                document.getElementById('direct-tab').classList.add('active');
+            } else {
+                document.querySelector('.tab:nth-child(2)').classList.add('active');
+                document.getElementById('search-tab').classList.add('active');
+                if (!articlesData) loadArticles();
+            }
+        }
+
+        function searchArticles() {
+            if (!articlesData) return;
+
+            const keyword = document.getElementById('keyword').value.toLowerCase();
+            const zone = document.getElementById('zone-filter').value;
+            const discipline = document.getElementById('discipline-filter').value;
+            const sort = document.getElementById('sort').value;
+
+            let filtered = articlesData.filter(a => {
+                const matchKeyword = !keyword ||
+                    a.manuscript_title.toLowerCase().includes(keyword) ||
+                    a.author_name.toLowerCase().includes(keyword);
+                const matchZone = !zone || a.zone === zone;
+                const matchDiscipline = !discipline || a.discipline === discipline;
+                return matchKeyword && matchZone && matchDiscipline;
+            });
+
+            filtered.sort((a, b) => {
+                if (sort === 'date') return new Date(b.created_at) - new Date(a.created_at);
+                if (sort === 'score') return b.weighted_score - a.weighted_score;
+                if (sort === 'comments') return b.comment_count - a.comment_count;
+            });
+
+            displayResults(filtered.slice(0, 50));
+        }
+
+        function displayResults(articles) {
+            const resultsDiv = document.getElementById('results');
+
+            if (articles.length === 0) {
+                resultsDiv.innerHTML = '<div style="text-align: center; padding: 40px; color: var(--color-charcoal-light);">未找到匹配的文献</div>';
+                return;
+            }
+
+            resultsDiv.innerHTML = articles.map(a => `
+                <div class="article-item" onclick="selectArticle('${a.id}')">
+                    <div class="article-title">${a.manuscript_title}</div>
+                    <div class="article-meta">
+                        <span class="badge zone-${a.zone}">${zoneNames[a.zone]}</span>
+                        <span>作者: ${a.author_name}</span>
+                        <span>粘度: ${a.weighted_score.toFixed(2)}</span>
+                        <span>评论: ${a.comment_count}</span>
+                        <span>${new Date(a.created_at).toLocaleDateString('zh-CN')}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function selectArticle(uuid) {
+            switchTab('direct');
+            document.getElementById('url').value = uuid;
+            processDownload();
+        }
 
         function showStatus(message, type) {
             const statusEl = document.getElementById("status");
@@ -240,23 +492,23 @@
             const btn = document.getElementById("downloadBtn");
             const resultDiv = document.getElementById("result");
             const downloadLink = document.getElementById("download-link");
-            
+
             if (!inputStr) {
-                showStatus("Error: Please provide a valid URL or UUID.", "error");
+                showStatus("错误: 请提供有效的 URL 或 UUID", "error");
                 return;
             }
 
             const uuidMatch = inputStr.match(/([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})/i);
             if (!uuidMatch) {
-                showStatus("Error: Could not extract a valid UUID from the input.", "error");
+                showStatus("错误: 无法从输入中提取有效的 UUID", "error");
                 return;
             }
             const uuid = uuidMatch[1];
 
             btn.disabled = true;
-            btn.innerText = "Authenticating...";
+            btn.innerText = "正在验证...";
             resultDiv.style.display = "none";
-            showStatus("Querying database for manuscript path...", "info");
+            showStatus("正在查询数据库获取文档路径...", "info");
 
             const headers = {
                 "apikey": SUPABASE_KEY,
@@ -268,20 +520,20 @@
                 const dbRes = await fetch(`${SUPABASE_URL}/rest/v1/preprints_with_ratings_mat?id=eq.${uuid}&select=pdf_path`, {
                     headers: headers
                 });
-                
-                if (!dbRes.ok) throw new Error("Database query failed. Manuscript may not exist.");
-                
+
+                if (!dbRes.ok) throw new Error("数据库查询失败，文档可能不存在");
+
                 const dbData = await dbRes.json();
                 if (!dbData || dbData.length === 0) {
-                    throw new Error("Record not found for the provided UUID.");
+                    throw new Error("未找到该 UUID 对应的记录");
                 }
-                
+
                 const pdfPath = dbData[0].pdf_path;
                 if (!pdfPath) {
-                    throw new Error("No PDF attachment found for this manuscript.");
+                    throw new Error("该文档没有附加 PDF 文件");
                 }
-                
-                showStatus(`Path resolved: ${pdfPath}\nRequesting signed storage token...`, "info");
+
+                showStatus(`路径已解析: ${pdfPath}\n正在请求签名存储令牌...`, "info");
 
                 const signRes = await fetch(`${SUPABASE_URL}/storage/v1/object/sign/manuscripts/${pdfPath}`, {
                     method: 'POST',
@@ -289,16 +541,16 @@
                     body: JSON.stringify({ expiresIn: 3600 })
                 });
 
-                if (!signRes.ok) throw new Error("Failed to acquire signed URL. Access might be restricted.");
+                if (!signRes.ok) throw new Error("获取签名 URL 失败，访问可能受限");
 
                 const signData = await signRes.json();
-                if (!signData.signedURL) throw new Error("Invalid response from storage API.");
+                if (!signData.signedURL) throw new Error("存储 API 返回无效响应");
 
                 const finalUrl = `${SUPABASE_URL}/storage/v1${signData.signedURL}`;
-                
-                showStatus("Authentication successful. Secure link generated.", "success");
+
+                showStatus("验证成功，安全链接已生成", "success");
                 downloadLink.href = finalUrl;
-                
+
                 const fileName = pdfPath.split('/').pop();
                 downloadLink.download = fileName;
                 resultDiv.style.display = "block";
@@ -307,7 +559,7 @@
                 showStatus(err.message, "error");
             } finally {
                 btn.disabled = false;
-                btn.innerText = "Generate Direct Link";
+                btn.innerText = "生成下载链接";
             }
         }
 
