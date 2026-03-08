@@ -6,7 +6,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub release](https://img.shields.io/github/v/release/colorcard/SHIT-PDF-Downloader)](https://github.com/colorcard/SHIT-Tools/releases)
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Fcolorcard.github.io%2FSHIT-PDF-Downloader%2F)](https://shit.colorcard.cc/)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fshit.colorcard.cc%2F)](https://shit.colorcard.cc/)
 
 [🌐 在线下载器](https://shit.colorcard.cc/) • [📊 数据观测站](https://shit.colorcard.cc/analysis.html) • [📦 批量下载](https://github.com/colorcard/SHIT-Tools/releases/tag/latest)
 
