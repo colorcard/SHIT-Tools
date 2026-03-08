@@ -22,6 +22,7 @@
 - 💻 **命令行工具** - 支持批量下载的强大 CLI
 - 📱 **移动端适配** - 完美支持各种屏幕尺寸
 - 🎨 **学术风格设计** - 优雅的期刊风格界面
+- ⚡ **极致压缩** - 数据文件压缩 60%，加载速度显著提升
 
 ---
 
@@ -68,12 +69,15 @@ python src/shitjournal_downloader.py -f urls.txt -o ./pdfs/
 SHIT-Tools/
 ├── src/
 │   ├── scraper.py                    # 多线程数据爬虫
-│   └── shitjournal_downloader.py     # 命令行 PDF 下载器
+│   ├── shitjournal_downloader.py     # 命令行 PDF 下载器
+│   └── compress_articles.py          # 数据压缩脚本
 ├── docs/
 │   ├── shitjournal_downloader.html   # Web 下载器
 │   └── analysis.html                 # 数据分析仪表板
 ├── data/
 │   └── scraped_articles.json         # 爬取的文章元数据
+├── dev/
+│   └── serve-local.sh                # 本地部署脚本
 └── downloads/                         # PDF 下载目录
 ```
 
@@ -180,6 +184,37 @@ python src/shitjournal_downloader.py https://shitjournal.org/preprints/abc123
 echo "uuid1\nuuid2\nuuid3" > urls.txt
 python src/shitjournal_downloader.py -f urls.txt -o ./pdfs/
 ```
+
+---
+
+### 5. 数据压缩优化
+
+智能数据压缩系统，显著提升页面加载性能。
+
+**压缩效果：**
+- 原始 JSON：831 KB
+- 压缩后 JS：333 KB
+- 压缩率：60%
+
+**优化技术：**
+- 移除 UUID 冗余（数组替代对象键）
+- ISO 时间戳转 Unix 时间戳
+- 浮点数精度优化（保留 2 位小数）
+- 单字母键名压缩
+- JS 格式替代 JSON（移除键名引号）
+
+**使用方法：**
+```bash
+# 手动压缩
+python src/compress_articles.py
+
+# 本地测试部署
+./dev/serve-local.sh
+```
+
+**自动化：**
+- GitHub Actions 自动在部署时压缩
+- 本地开发脚本集成压缩流程
 
 ---
 
