@@ -428,6 +428,7 @@
         async function loadArticles() {
             try {
                 articlesData = articles.map(a => ({
+                    id: a.i,
                     manuscript_title: a.t,
                     zone: a.z,
                     created_at: new Date(a.c * 1000).toISOString(),

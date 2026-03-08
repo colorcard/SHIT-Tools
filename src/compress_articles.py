@@ -7,9 +7,10 @@ def compress():
         data = json.load(f)
 
     articles = []
-    for article in data['articles'].values():
+    for uuid, article in data['articles'].items():
         ts = int(datetime.fromisoformat(article['created_at'].replace('+00:00', '')).timestamp())
         articles.append({
+            'i': uuid,
             't': article['manuscript_title'],
             'z': article['zone'],
             'c': ts,
