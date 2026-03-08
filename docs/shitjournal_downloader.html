@@ -559,51 +559,68 @@
                 "Content-Type": "application/json"
             };
 
+            let finalUrl = null;
+            let fileName = `${uuid}.pdf`;
+
             try {
                 const dbRes = await fetch(`${SUPABASE_URL}/rest/v1/preprints_with_ratings_mat?id=eq.${uuid}&select=pdf_path`, {
                     headers: headers
                 });
 
-                if (!dbRes.ok) throw new Error("数据库查询失败，文档可能不存在");
+                if (dbRes.ok) {
+                    const dbData = await dbRes.json();
+                    if (dbData && dbData.length > 0 && dbData[0].pdf_path) {
+                        const pdfPath = dbData[0].pdf_path;
+                        showStatus(`路径已解析: ${pdfPath}\n正在请求签名存储令牌...`, "info");
 
-                const dbData = await dbRes.json();
-                if (!dbData || dbData.length === 0) {
-                    throw new Error("未找到该 UUID 对应的记录");
+                        const signRes = await fetch(`${SUPABASE_URL}/storage/v1/object/sign/manuscripts/${pdfPath}`, {
+                            method: 'POST',
+                            headers: headers,
+                            body: JSON.stringify({ expiresIn: 3600 })
+                        });
+
+                        if (signRes.ok) {
+                            const signData = await signRes.json();
+                            if (signData.signedURL) {
+                                finalUrl = `${SUPABASE_URL}/storage/v1${signData.signedURL}`;
+                                fileName = pdfPath.split('/').pop();
+                            }
+                        }
+                    }
                 }
-
-                const pdfPath = dbData[0].pdf_path;
-                if (!pdfPath) {
-                    throw new Error("该文档没有附加 PDF 文件");
-                }
-
-                showStatus(`路径已解析: ${pdfPath}\n正在请求签名存储令牌...`, "info");
-
-                const signRes = await fetch(`${SUPABASE_URL}/storage/v1/object/sign/manuscripts/${pdfPath}`, {
-                    method: 'POST',
-                    headers: headers,
-                    body: JSON.stringify({ expiresIn: 3600 })
-                });
-
-                if (!signRes.ok) throw new Error("获取签名 URL 失败，访问可能受限");
-
-                const signData = await signRes.json();
-                if (!signData.signedURL) throw new Error("存储 API 返回无效响应");
-
-                const finalUrl = `${SUPABASE_URL}/storage/v1${signData.signedURL}`;
-
-                showStatus("验证成功，安全链接已生成", "success");
-                downloadLink.href = finalUrl;
-
-                const fileName = pdfPath.split('/').pop();
-                downloadLink.download = fileName;
-                resultDiv.style.display = "block";
-
             } catch (err) {
-                showStatus(err.message, "error");
-            } finally {
+                console.log("Supabase method failed:", err);
+            }
+
+            if (!finalUrl) {
+                showStatus("正在尝试官方 API...", "info");
+                try {
+                    const apiRes = await fetch(`https://api.shitjournal.org/api/articles/${uuid}`);
+                    if (apiRes.ok) {
+                        const apiData = await apiRes.json();
+                        if (apiData.status === "success" && apiData.article && apiData.article.pdf_url) {
+                            finalUrl = apiData.article.pdf_url;
+                        }
+                    }
+                } catch (err) {
+                    finalUrl = `https://files.shitjournal.org/${uuid}.pdf`;
+                    showStatus("检测到浏览器安全限制，已生成直链", "success");
+                }
+            }
+
+            if (!finalUrl) {
+                showStatus("错误: 无法获取 PDF 下载链接", "error");
                 btn.disabled = false;
                 btn.innerText = "生成下载链接";
+                return;
             }
+
+            showStatus("验证成功，安全链接已生成", "success");
+            downloadLink.href = finalUrl;
+            downloadLink.download = fileName;
+            resultDiv.style.display = "block";
+            btn.disabled = false;
+            btn.innerText = "生成下载链接";
         }
 
         document.getElementById('url').addEventListener('keypress', function (e) {
