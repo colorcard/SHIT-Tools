@@ -5,6 +5,7 @@ on:
     workflows: ["Update Data"]
     types:
       - completed
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -48,6 +49,8 @@ jobs:
           find downloads -name '*.pdf' 2>/dev/null | sort > old_pdfs.txt || touch old_pdfs.txt
 
       - name: Download PDFs (incremental)
+        env:
+          PYTHONUNBUFFERED: 1
         run: |
           python src/scraper.py
           echo "Total PDFs: $(find downloads -name '*.pdf' | wc -l)"
