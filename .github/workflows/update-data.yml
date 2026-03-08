@@ -2,7 +2,9 @@ name: Update Data
 
 on:
   schedule:
-    - cron: '0 20 * * *'  # 每天中国时间 04:00 运行
+    - cron: '0 20 * * *'  # 中国时间凌晨 04:00
+    - cron: '0 4 * * *'   # 中国时间中午 12:00
+    - cron: '0 12 * * *'  # 中国时间晚上 20:00
   workflow_dispatch:  # 允许手动触发
 
 permissions:
@@ -34,3 +36,10 @@ jobs:
           git add data/scraped_articles.json
           git diff --staged --quiet || git commit -m "chore: Update scraped articles data"
           git push
+
+      - name: Trigger static deployment
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh workflow run static.yml
