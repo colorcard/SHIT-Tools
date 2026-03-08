@@ -259,12 +259,12 @@
             </div>
         </div>
     </div>
-    <script src="articlesData.js"></script>
+    <script src="articles.js"></script>
     <script>
         const zoneNames = {latrine: '🚽旱厕', septic: '🧪化粪池', stone: '🪨构石', sediment: '🕳️沉淀区'};
         const disciplineNames = {medical: '医学', interdisciplinary: '交叉学科', humanities: '人文', engineering: '工程', science: '理学', agriculture: '农学', law_social: '法社'};
 
-        const articlesDataData = articlesData.map(a => ({
+        const articlesData = articles.map(a => ({
             manuscript_title: a.t,
             zone: a.z,
             created_at: new Date(a.c * 1000).toISOString(),
@@ -275,26 +275,26 @@
             comment_count: a.m
         }));
 
-        const authors = new Set(articlesDataData.map(a => a.author_name));
-        const dates = articlesDataData.map(a => new Date(a.created_at));
+        const authors = new Set(articlesData.map(a => a.author_name));
+        const dates = articlesData.map(a => new Date(a.created_at));
         const minDate = new Date(Math.min(...dates));
         const maxDate = new Date(Math.max(...dates));
         const daysDiff = Math.ceil((maxDate - minDate) / (1000 * 60 * 60 * 24)) + 1;
 
-        const totalViews = articlesDataData.reduce((sum, a) => sum + (a.comment_count || 0), 0);
-        const avgRating = articlesDataData.filter(a => a.weighted_score).reduce((sum, a) => sum + a.weighted_score, 0) / articlesDataData.filter(a => a.weighted_score).length;
+        const totalViews = articlesData.reduce((sum, a) => sum + (a.comment_count || 0), 0);
+        const avgRating = articlesData.filter(a => a.weighted_score).reduce((sum, a) => sum + a.weighted_score, 0) / articlesData.filter(a => a.weighted_score).length;
 
-        document.getElementById('totalArticles').textContent = articlesDataData.length;
+        document.getElementById('totalArticles').textContent = articlesData.length;
         document.getElementById('totalAuthors').textContent = authors.size;
         document.getElementById('dateRange').textContent = daysDiff;
-        document.getElementById('avgDaily').textContent = (articlesDataData.length / daysDiff).toFixed(1);
-        document.getElementById('avgAuthor').textContent = (articlesDataData.length / authors.size).toFixed(1);
+        document.getElementById('avgDaily').textContent = (articlesData.length / daysDiff).toFixed(1);
+        document.getElementById('avgAuthor').textContent = (articlesData.length / authors.size).toFixed(1);
         document.getElementById('totalViews').textContent = totalViews.toLocaleString();
                 document.getElementById('avgRating').textContent = avgRating.toFixed(2);
 
         // 分区分布
         const zones = {};
-        articlesDataData.forEach(a => zones[a.zone] = (zones[a.zone] || 0) + 1);
+        articlesData.forEach(a => zones[a.zone] = (zones[a.zone] || 0) + 1);
                 new Chart(document.getElementById('zoneChart'), {
                     type: 'doughnut',
                     data: {
@@ -309,7 +309,7 @@
 
                 // 学科分布
                 const disciplines = {};
-                articlesDataData.forEach(a => disciplines[a.discipline] = (disciplines[a.discipline] || 0) + 1);
+                articlesData.forEach(a => disciplines[a.discipline] = (disciplines[a.discipline] || 0) + 1);
                 new Chart(document.getElementById('disciplineChart'), {
                     type: 'bar',
                     data: {
@@ -548,7 +548,6 @@
                     rotateRatio: 0.3,
                     backgroundColor: '#ffffff'
                 });
-            });
     </script>
 </body>
 </html>

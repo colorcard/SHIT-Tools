@@ -43,15 +43,12 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Compress articles
-        run: python src/compress_articles.py
-
       - name: Prepare site
         run: |
           mkdir site
+          python src/compress_articles.py
           cp docs/shitjournal_downloader.html site/index.html
           cp docs/analysis.html site/analysis.html
-          cp site/articles.js site/articles.js
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
