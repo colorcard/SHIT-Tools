@@ -313,6 +313,25 @@
             color: var(--color-charcoal-light);
         }
 
+        .warning-banner {
+            width: 100%;
+            background-color: #fef3c7;
+            border-bottom: 1px solid #f59e0b;
+            padding: 12px 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            font-size: 13px;
+            color: #92400e;
+        }
+
+        .warning-banner a {
+            color: #92400e;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
         @media (max-width: 768px) {
             header { padding: 15px 20px; }
             .logo-main { font-size: 40px; }
@@ -342,6 +361,11 @@
         </div>
         <a href="analysis.html" class="header-link">观测站 →</a>
     </header>
+
+    <div class="warning-banner">
+        <span>⚠️ 官方站点面临关站风险，本工具可能随时失效</span>
+        <a href="https://github.com/colorcard/SHIT-Tools/releases/tag/latest" target="_blank">前往 Release 下载归档 →</a>
+    </div>
 
     <div class="container">
         <h1>PDF 下载器</h1>

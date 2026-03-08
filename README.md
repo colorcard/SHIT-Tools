@@ -12,6 +12,13 @@
 
 </div>
 
+>[!WARNING]
+> **服务状态提醒**
+>
+> 官方站点 https://shitjournal.org/ 目前在大陆地区无法访问，且面临舆论压力，存在关站风险。
+>
+> 本工具依赖官方 API，若期刊停止服务可能失效。建议及时前往 [Release](https://github.com/colorcard/SHIT-Tools/releases/tag/latest) 下载完整归档。
+
 ---
 
 ## ✨ 核心特性
