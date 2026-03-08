@@ -72,6 +72,10 @@ def download_and_rename(article, output_dir="downloads"):
     author = sanitize_filename(article["author_name"])
     discipline = article["discipline"]
 
+    # 尝试方法1: Supabase 存储（旧文章）
+    final_url = None
+    filename = f"{title}_{author}_{discipline}_{article_id[:8]}.pdf"
+
     headers = {
         "apikey": SUPABASE_KEY,
         "Authorization": f"Bearer {SUPABASE_KEY}"
@@ -82,22 +86,39 @@ def download_and_rename(article, output_dir="downloads"):
         response = requests.get(db_url, headers=headers)
         response.raise_for_status()
         data = response.json()
-        if not data or not data[0].get("pdf_path"):
-            return (False, "未找到PDF路径")
+        if data and data[0].get("pdf_path"):
+            pdf_path = data[0]["pdf_path"]
+            sign_url = f"{SUPABASE_URL}/storage/v1/object/sign/manuscripts/{pdf_path}"
+            sign_response = requests.post(sign_url, headers=headers, json={"expiresIn": 3600})
+            sign_response.raise_for_status()
+            signed_path = sign_response.json().get("signedURL")
+            if signed_path:
+                final_url = f"{SUPABASE_URL}/storage/v1{signed_path}"
+    except Exception:
+        pass
 
-        pdf_path = data[0]["pdf_path"]
-        sign_url = f"{SUPABASE_URL}/storage/v1/object/sign/manuscripts/{pdf_path}"
-        sign_response = requests.post(sign_url, headers=headers, json={"expiresIn": 3600})
-        sign_response.raise_for_status()
+    # 尝试方法2: 官方 API（新文章）
+    if not final_url:
+        try:
+            api_response = requests.get(f"{API_URL}{article_id}", timeout=10)
+            api_response.raise_for_status()
+            response_data = api_response.json()
+            if response_data.get("status") == "success" and response_data.get("article"):
+                pdf_url = response_data["article"].get("pdf_url")
+                if pdf_url:
+                    final_url = pdf_url
+        except Exception:
+            pass
 
-        signed_path = sign_response.json().get("signedURL")
-        final_url = f"{SUPABASE_URL}/storage/v1{signed_path}"
+    if not final_url:
+        return (False, "未找到PDF下载链接")
 
-        pdf_response = requests.get(final_url, stream=True)
+    # 下载文件
+    try:
+        pdf_response = requests.get(final_url, stream=True, timeout=30)
         pdf_response.raise_for_status()
 
         os.makedirs(output_dir, exist_ok=True)
-        filename = f"{title}_{author}_{discipline}_{article_id[:8]}.pdf"
         save_path = os.path.join(output_dir, filename)
 
         with open(save_path, 'wb') as f:

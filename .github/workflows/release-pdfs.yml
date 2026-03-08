@@ -18,25 +18,26 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Download previous release
-        continue-on-error: true
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          gh release download latest -p "shit-pdfs.zip" || echo "No previous release found"
-
-      - name: Extract previous PDFs
-        continue-on-error: true
-        run: |
-          if [ -f shit-pdfs.zip ]; then
-            unzip -q shit-pdfs.zip
-            echo "Restored $(find downloads -name '*.pdf' | wc -l) PDFs from previous release"
-          fi
+      - name: Restore PDFs from cache
+        uses: actions/cache@v4
+        with:
+          path: downloads/
+          key: pdfs-${{ github.run_id }}
+          restore-keys: |
+            pdfs-
 
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
 
       - name: Install dependencies
         run: |
@@ -51,16 +52,41 @@ jobs:
           python src/scraper.py
           echo "Total PDFs: $(find downloads -name '*.pdf' | wc -l)"
 
+      - name: Organize PDFs by zone
+        run: |
+          python src/organize_by_zone.py
+
       - name: Generate changelog
         run: |
           find downloads -name '*.pdf' | sort > new_pdfs.txt
           comm -13 old_pdfs.txt new_pdfs.txt > added_pdfs.txt
-          echo "新增 $(wc -l < added_pdfs.txt) 个PDF文件"
+          NEW_COUNT=$(wc -l < added_pdfs.txt)
+          echo "NEW_COUNT=$NEW_COUNT" >> $GITHUB_ENV
+          echo "新增 $NEW_COUNT 个PDF文件"
 
-      - name: Package PDFs
+      - name: Package zone archives
+        if: ${{ env.NEW_COUNT != '0' }}
         run: |
-          zip -r shit-pdfs.zip downloads/
-          echo "Package size: $(du -h shit-pdfs.zip | cut -f1)"
+          for zone in latrine septic stone sediment; do
+            if [ -d "downloads_${zone}" ] && [ "$(ls -A downloads_${zone})" ]; then
+              zip -q -r "${zone}.zip" "downloads_${zone}/"
+              echo "Created ${zone}.zip: $(du -h ${zone}.zip | cut -f1)"
+            fi
+          done
+
+      - name: Check archive sizes
+        if: ${{ env.NEW_COUNT != '0' }}
+        run: |
+          echo "## 📦 Archive Sizes" >> $GITHUB_STEP_SUMMARY
+          for zone in latrine septic stone sediment; do
+            if [ -f "${zone}.zip" ]; then
+              SIZE_MB=$(du -m "${zone}.zip" | cut -f1)
+              echo "- ${zone}.zip: ${SIZE_MB} MB" >> $GITHUB_STEP_SUMMARY
+              if [ $SIZE_MB -gt 1800 ]; then
+                echo "::warning::${zone}.zip approaching 2GB limit (${SIZE_MB}/2048 MB)"
+              fi
+            fi
+          done
 
       - name: Create release notes
         run: |
@@ -69,8 +95,28 @@ jobs:
           echo "**更新时间**: $(TZ='Asia/Shanghai' date '+%Y年%m月%d日 %H:%M:%S')" >> release_notes.md
           echo "**总文件数**: $(wc -l < new_pdfs.txt)" >> release_notes.md
           echo "" >> release_notes.md
-          if [ -s added_pdfs.txt ]; then
-            echo "### 🆕 新增文件 ($(wc -l < added_pdfs.txt))" >> release_notes.md
+
+          # Zone statistics
+          if [ "$NEW_COUNT" != "0" ]; then
+            echo "### 🗂️ 分区文件" >> release_notes.md
+            for zone in latrine septic stone sediment; do
+              if [ -f "${zone}.zip" ]; then
+                COUNT=$(find "downloads_${zone}" -name '*.pdf' 2>/dev/null | wc -l)
+                SIZE=$(du -h "${zone}.zip" | cut -f1)
+                case $zone in
+                  latrine) NAME="旱厕区" ;;
+                  septic) NAME="化粪池区" ;;
+                  stone) NAME="构石区" ;;
+                  sediment) NAME="沉淀区" ;;
+                esac
+                echo "- ${NAME} (${zone}.zip): ${COUNT} 篇, ${SIZE}" >> release_notes.md
+              fi
+            done
+            echo "" >> release_notes.md
+          fi
+
+          if [ "$NEW_COUNT" != "0" ]; then
+            echo "### 🆕 新增文件 ($NEW_COUNT)" >> release_notes.md
             echo '```' >> release_notes.md
             cat added_pdfs.txt | sed 's|downloads/||' >> release_notes.md
             echo '```' >> release_notes.md
@@ -78,17 +124,28 @@ jobs:
             echo "### ℹ️ 本次无新增文件" >> release_notes.md
           fi
 
-      - name: Delete old release
+      - name: Update release (no new files)
+        if: ${{ env.NEW_COUNT == '0' }}
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release edit latest --notes-file release_notes.md
+
+      - name: Delete old release (has new files)
+        if: ${{ env.NEW_COUNT != '0' }}
         continue-on-error: true
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release delete latest --yes || echo "No previous release to delete"
 
-      - name: Create new release
+      - name: Create new release (has new files)
+        if: ${{ env.NEW_COUNT != '0' }}
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create latest shit-pdfs.zip \
+          gh release create latest \
+            latrine.zip septic.zip stone.zip sediment.zip \
             --title "Latest PDFs - $(TZ='Asia/Shanghai' date '+%Y-%m-%d')" \
             --notes-file release_notes.md
