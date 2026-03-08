@@ -19,11 +19,11 @@ def organize_pdfs():
         zone = article['zone']
         article_prefix = article_id[:8]
 
-        # Find PDF file by article ID prefix
+        # Find PDF file by article ID prefix (ID is at the end of filename)
         found = False
         if os.path.exists('downloads'):
             for pdf in os.listdir('downloads'):
-                if pdf.startswith(article_prefix) and pdf.endswith('.pdf'):
+                if f'_{article_prefix}.pdf' in pdf:
                     src = os.path.join('downloads', pdf)
                     dst = os.path.join(f'downloads_{zone}', pdf)
                     shutil.copy2(src, dst)
