@@ -259,34 +259,42 @@
             </div>
         </div>
     </div>
+    <script src="articlesData.js"></script>
     <script>
         const zoneNames = {latrine: '🚽旱厕', septic: '🧪化粪池', stone: '🪨构石', sediment: '🕳️沉淀区'};
         const disciplineNames = {medical: '医学', interdisciplinary: '交叉学科', humanities: '人文', engineering: '工程', science: '理学', agriculture: '农学', law_social: '法社'};
 
-        fetch('scraped_articles.json')
-            .then(r => r.json())
-            .then(data => {
-                const articles = Object.values(data.articles);
-                const authors = new Set(articles.map(a => a.author_name));
-                const dates = articles.map(a => new Date(a.created_at));
-                const minDate = new Date(Math.min(...dates));
-                const maxDate = new Date(Math.max(...dates));
-                const daysDiff = Math.ceil((maxDate - minDate) / (1000 * 60 * 60 * 24)) + 1;
+        const articlesDataData = articlesData.map(a => ({
+            manuscript_title: a.t,
+            zone: a.z,
+            created_at: new Date(a.c * 1000).toISOString(),
+            author_name: a.a,
+            discipline: a.d,
+            weighted_score: a.s,
+            rating_count: a.r,
+            comment_count: a.m
+        }));
 
-                const totalViews = articles.reduce((sum, a) => sum + (a.comment_count || 0), 0);
-                const avgRating = articles.filter(a => a.weighted_score).reduce((sum, a) => sum + a.weighted_score, 0) / articles.filter(a => a.weighted_score).length;
+        const authors = new Set(articlesDataData.map(a => a.author_name));
+        const dates = articlesDataData.map(a => new Date(a.created_at));
+        const minDate = new Date(Math.min(...dates));
+        const maxDate = new Date(Math.max(...dates));
+        const daysDiff = Math.ceil((maxDate - minDate) / (1000 * 60 * 60 * 24)) + 1;
 
-                document.getElementById('totalArticles').textContent = articles.length;
-                document.getElementById('totalAuthors').textContent = authors.size;
-                document.getElementById('dateRange').textContent = daysDiff;
-                document.getElementById('avgDaily').textContent = (articles.length / daysDiff).toFixed(1);
-                document.getElementById('avgAuthor').textContent = (articles.length / authors.size).toFixed(1);
-                document.getElementById('totalViews').textContent = totalViews.toLocaleString();
+        const totalViews = articlesDataData.reduce((sum, a) => sum + (a.comment_count || 0), 0);
+        const avgRating = articlesDataData.filter(a => a.weighted_score).reduce((sum, a) => sum + a.weighted_score, 0) / articlesDataData.filter(a => a.weighted_score).length;
+
+        document.getElementById('totalArticles').textContent = articlesDataData.length;
+        document.getElementById('totalAuthors').textContent = authors.size;
+        document.getElementById('dateRange').textContent = daysDiff;
+        document.getElementById('avgDaily').textContent = (articlesDataData.length / daysDiff).toFixed(1);
+        document.getElementById('avgAuthor').textContent = (articlesDataData.length / authors.size).toFixed(1);
+        document.getElementById('totalViews').textContent = totalViews.toLocaleString();
                 document.getElementById('avgRating').textContent = avgRating.toFixed(2);
 
-                // 分区分布
-                const zones = {};
-                articles.forEach(a => zones[a.zone] = (zones[a.zone] || 0) + 1);
+        // 分区分布
+        const zones = {};
+        articlesDataData.forEach(a => zones[a.zone] = (zones[a.zone] || 0) + 1);
                 new Chart(document.getElementById('zoneChart'), {
                     type: 'doughnut',
                     data: {
@@ -301,7 +309,7 @@
 
                 // 学科分布
                 const disciplines = {};
-                articles.forEach(a => disciplines[a.discipline] = (disciplines[a.discipline] || 0) + 1);
+                articlesDataData.forEach(a => disciplines[a.discipline] = (disciplines[a.discipline] || 0) + 1);
                 new Chart(document.getElementById('disciplineChart'), {
                     type: 'bar',
                     data: {
@@ -317,7 +325,7 @@
 
                 // 每日趋势
                 const dailyCounts = {};
-                articles.forEach(a => {
+                articlesData.forEach(a => {
                     const date = new Date(a.created_at).toISOString().split('T')[0];
                     dailyCounts[date] = (dailyCounts[date] || 0) + 1;
                 });
@@ -340,7 +348,7 @@
 
                 // 分区时间分布
                 const zoneByDate = {};
-                articles.forEach(a => {
+                articlesData.forEach(a => {
                     const date = new Date(a.created_at).toISOString().split('T')[0];
                     if (!zoneByDate[a.zone]) zoneByDate[a.zone] = {};
                     zoneByDate[a.zone][date] = (zoneByDate[a.zone][date] || 0) + 1;
@@ -363,7 +371,7 @@
 
                 // 分区-学科交叉
                 const cross = {};
-                articles.forEach(a => {
+                articlesData.forEach(a => {
                     const key = `${zoneNames[a.zone]}-${disciplineNames[a.discipline] || a.discipline}`;
                     cross[key] = (cross[key] || 0) + 1;
                 });
@@ -379,7 +387,7 @@
 
                 // 时段分布
                 const hours = {};
-                articles.forEach(a => {
+                articlesData.forEach(a => {
                     const h = new Date(a.created_at).getHours();
                     hours[h] = (hours[h] || 0) + 1;
                 });
@@ -394,7 +402,7 @@
 
                 // Top作者
                 const authorCounts = {};
-                articles.forEach(a => authorCounts[a.author_name] = (authorCounts[a.author_name] || 0) + 1);
+                articlesData.forEach(a => authorCounts[a.author_name] = (authorCounts[a.author_name] || 0) + 1);
                 const topAuthors = Object.entries(authorCounts).sort((a, b) => b[1] - a[1]).slice(0, 15);
                 new Chart(document.getElementById('authorChart'), {
                     type: 'bar',
@@ -408,7 +416,7 @@
                 // 周分布
                 const weekdays = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
                 const weekdayCounts = {};
-                articles.forEach(a => {
+                articlesData.forEach(a => {
                     const day = new Date(a.created_at).getDay();
                     weekdayCounts[day] = (weekdayCounts[day] || 0) + 1;
                 });
@@ -423,7 +431,7 @@
 
                 // 月度统计
                 const months = {};
-                articles.forEach(a => {
+                articlesData.forEach(a => {
                     const month = new Date(a.created_at).toISOString().slice(0, 7);
                     months[month] = (months[month] || 0) + 1;
                 });
@@ -438,7 +446,7 @@
                 });
 
                 // Top 20 高粘度
-                const topRated = articles.filter(a => a.weighted_score).sort((a, b) => b.weighted_score - a.weighted_score).slice(0, 20);
+                const topRated = articlesData.filter(a => a.weighted_score).sort((a, b) => b.weighted_score - a.weighted_score).slice(0, 20);
                 new Chart(document.getElementById('topRatedChart'), {
                     type: 'bar',
                     data: {
@@ -450,7 +458,7 @@
 
                 // 粘度分布
                 const ratingDist = [0, 0, 0, 0, 0];
-                articles.forEach(a => {
+                articlesData.forEach(a => {
                     if (a.weighted_score >= 0 && a.weighted_score < 1) ratingDist[0]++;
                     else if (a.weighted_score >= 1 && a.weighted_score < 2) ratingDist[1]++;
                     else if (a.weighted_score >= 2 && a.weighted_score < 3) ratingDist[2]++;
@@ -467,7 +475,7 @@
                 });
 
                 // 浏览量Top 15
-                const topViews = articles.filter(a => a.comment_count).sort((a, b) => b.comment_count - a.comment_count).slice(0, 15);
+                const topViews = articlesData.filter(a => a.comment_count).sort((a, b) => b.comment_count - a.comment_count).slice(0, 15);
                 new Chart(document.getElementById('topViewsChart'), {
                     type: 'bar',
                     data: {
@@ -478,7 +486,7 @@
                 });
 
                 // 散点图
-                const scatterData = articles.filter(a => a.weighted_score && a.comment_count).map(a => ({x: a.comment_count, y: a.weighted_score}));
+                const scatterData = articlesData.filter(a => a.weighted_score && a.comment_count).map(a => ({x: a.comment_count, y: a.weighted_score}));
                 new Chart(document.getElementById('scatterChart'), {
                     type: 'scatter',
                     data: {datasets: [{label: '粘度 vs 评论数', data: scatterData, backgroundColor: 'rgba(177, 142, 38, 0.5)'}]},
@@ -487,7 +495,7 @@
 
                 // 嗅探者活跃度
                 const ratingCountDist = [0, 0, 0, 0, 0];
-                articles.forEach(a => {
+                articlesData.forEach(a => {
                     const rc = a.rating_count || 0;
                     if (rc === 0) ratingCountDist[0]++;
                     else if (rc <= 5) ratingCountDist[1]++;
@@ -507,7 +515,7 @@
                 // 各分区平均粘度
                 const zoneRatings = {};
                 Object.keys(zones).forEach(z => {
-                    const zoneArts = articles.filter(a => a.zone === z && a.weighted_score);
+                    const zoneArts = articlesData.filter(a => a.zone === z && a.weighted_score);
                     zoneRatings[z] = zoneArts.length ? zoneArts.reduce((s, a) => s + a.weighted_score, 0) / zoneArts.length : 0;
                 });
                 new Chart(document.getElementById('zoneRatingChart'), {
@@ -522,7 +530,7 @@
                 // 标题词云
                 const stopWords = new Set(['的', '与', '和', '在', '对', '及', '中', '基于', '研究', 'THE', 'OF', 'AND', 'IN', 'A', 'ON']);
                 const wordFreq = {};
-                articles.forEach(a => {
+                articlesData.forEach(a => {
                     const words = a.manuscript_title.match(/[\u4e00-\u9fa5]+|[a-zA-Z]+/g) || [];
                     words.forEach(w => {
                         if (w.length > 1 && !stopWords.has(w.toUpperCase())) {

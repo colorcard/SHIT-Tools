@@ -412,6 +412,7 @@
         &copy; 2024 S.H.I.T Journal Archiver. 仅供学习交流使用
     </footer>
 
+    <script src="articles.js"></script>
     <script>
         const SUPABASE_URL = "https://bcgdqepzakcufaadgnda.supabase.co";
         const SUPABASE_KEY = "sb_publishable_wHqWLjQwO2lMwkGLeBktng_Mk_xf5xd";
@@ -426,9 +427,16 @@
 
         async function loadArticles() {
             try {
-                const response = await fetch('scraped_articles.json');
-                const data = await response.json();
-                articlesData = Object.values(data.articles);
+                articlesData = articles.map(a => ({
+                    manuscript_title: a.t,
+                    zone: a.z,
+                    created_at: new Date(a.c * 1000).toISOString(),
+                    author_name: a.a,
+                    discipline: a.d,
+                    weighted_score: a.s,
+                    rating_count: a.r,
+                    comment_count: a.m
+                }));
 
                 const disciplines = [...new Set(articlesData.map(a => a.discipline))].sort();
                 const disciplineSelect = document.getElementById('discipline-filter');

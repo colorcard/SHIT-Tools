@@ -38,12 +38,20 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Compress articles
+        run: python src/compress_articles.py
+
       - name: Prepare site
         run: |
           mkdir site
           cp docs/shitjournal_downloader.html site/index.html
           cp docs/analysis.html site/analysis.html
-          cp data/scraped_articles.json site/scraped_articles.json
+          cp site/articles.js site/articles.js
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
