@@ -6,6 +6,7 @@ import argparse
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
+API_URL = "https://api.shitjournal.org/api/articles/"
 SUPABASE_URL = "https://bcgdqepzakcufaadgnda.supabase.co"
 SUPABASE_KEY = "sb_publishable_wHqWLjQwO2lMwkGLeBktng_Mk_xf5xd"
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -23,22 +24,44 @@ def save_data(data):
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 def fetch_articles(zone):
-    headers = {
-        "apikey": SUPABASE_KEY,
-        "Authorization": f"Bearer {SUPABASE_KEY}"
-    }
-    url = f"{SUPABASE_URL}/rest/v1/preprints_with_ratings_mat"
-    params = {
-        "zone": f"eq.{zone}",
-        "select": "id,manuscript_title,zone,created_at,author_name,discipline,weighted_score,rating_count,comment_count"
-    }
-    try:
-        response = requests.get(url, headers=headers, params=params)
-        response.raise_for_status()
-        return response.json()
-    except Exception as e:
-        print(f"[-] 获取 {zone} 区文章失败: {e}")
-        return []
+    all_articles = []
+    page = 1
+    while True:
+        params = {
+            "zone": zone,
+            "sort": "newest",
+            "discipline": "all",
+            "page": page,
+            "limit": 50
+        }
+        try:
+            response = requests.get(API_URL, params=params)
+            response.raise_for_status()
+            data = response.json()
+            articles = data.get("data", [])
+
+            if not articles:
+                break
+
+            for article in articles:
+                all_articles.append({
+                    "id": article["id"],
+                    "manuscript_title": article["title"],
+                    "zone": article["zones"],
+                    "created_at": article["created_at"],
+                    "author_name": article["author"]["display_name"],
+                    "discipline": article["discipline"],
+                    "weighted_score": article["weighted_score"],
+                    "rating_count": article["rating_count"],
+                    "comment_count": article["comment_count"]
+                })
+
+            page += 1
+        except Exception as e:
+            print(f"[-] 获取 {zone} 区第 {page} 页失败: {e}")
+            break
+
+    return all_articles
 
 def sanitize_filename(text):
     return re.sub(r'[<>:"/\\|?*]', '_', text)[:30]
@@ -120,8 +143,22 @@ def scrape_all_zones(skip_download=False):
                 new_articles.append(article)
                 print(f"[+] 新增: {article['manuscript_title']}")
             else:
+                old = data["articles"][article_id]
+                changes = []
+                if old.get("zone") != article.get("zone"):
+                    changes.append(f"zone: {old.get('zone')} → {article.get('zone')}")
+                if old.get("weighted_score") != article.get("weighted_score"):
+                    changes.append(f"score: {old.get('weighted_score'):.2f} → {article.get('weighted_score'):.2f}")
+                if old.get("rating_count") != article.get("rating_count"):
+                    changes.append(f"ratings: {old.get('rating_count')} → {article.get('rating_count')}")
+                if old.get("comment_count") != article.get("comment_count"):
+                    changes.append(f"comments: {old.get('comment_count')} → {article.get('comment_count')}")
+
                 data["articles"][article_id] = article
                 updated += 1
+
+                if changes:
+                    print(f"[~] 更新: {article['manuscript_title'][:30]} ({', '.join(changes)})")
 
     data["last_update"] = datetime.now().isoformat()
     save_data(data)
