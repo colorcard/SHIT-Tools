@@ -83,7 +83,7 @@ def download_and_rename(article, output_dir="downloads"):
         response.raise_for_status()
         data = response.json()
         if not data or not data[0].get("pdf_path"):
-            return False
+            return (False, "未找到PDF路径")
 
         pdf_path = data[0]["pdf_path"]
         sign_url = f"{SUPABASE_URL}/storage/v1/object/sign/manuscripts/{pdf_path}"
@@ -105,10 +105,9 @@ def download_and_rename(article, output_dir="downloads"):
                 f.write(chunk)
 
         print(f"[+] 已下载: {filename}")
-        return True
+        return (True, None)
     except Exception as e:
-        print(f"[-] 下载失败 {article_id}: {e}")
-        return False
+        return (False, str(e))
 
 def check_missing_downloads(output_dir="downloads"):
     data = load_existing_data()
@@ -173,21 +172,43 @@ def scrape_all_zones(skip_download=False):
     if missing:
         print(f"\n[*] 发现 {len(missing)} 篇缺失文件，开始重新下载...")
         success = 0
+        failed = []
         with ThreadPoolExecutor(max_workers=8) as executor:
             futures = {executor.submit(download_and_rename, article): article for article in missing}
             for future in as_completed(futures):
-                if future.result():
+                article = futures[future]
+                ok, error = future.result()
+                if ok:
                     success += 1
+                else:
+                    failed.append((article, error))
+
         print(f"\n[*] 重新下载完成！成功 {success}/{len(missing)} 篇")
+        if failed:
+            print(f"\n[!] 以下 {len(failed)} 篇下载失败：")
+            for article, error in failed:
+                print(f"  - {article['manuscript_title'][:40]} (ID: {article['id'][:8]})")
+                print(f"    原因: {error}")
     elif new_articles:
         print(f"\n[*] 开始多线程下载 {len(new_articles)} 篇文章...")
         success = 0
+        failed = []
         with ThreadPoolExecutor(max_workers=8) as executor:
             futures = {executor.submit(download_and_rename, article): article for article in new_articles}
             for future in as_completed(futures):
-                if future.result():
+                article = futures[future]
+                ok, error = future.result()
+                if ok:
                     success += 1
+                else:
+                    failed.append((article, error))
+
         print(f"\n[*] 下载完成！成功 {success}/{len(new_articles)} 篇")
+        if failed:
+            print(f"\n[!] 以下 {len(failed)} 篇下载失败：")
+            for article, error in failed:
+                print(f"  - {article['manuscript_title'][:40]} (ID: {article['id'][:8]})")
+                print(f"    原因: {error}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="S.H.I.T Journal 文章爬虫")
