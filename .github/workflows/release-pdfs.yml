@@ -19,11 +19,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Calculate cache slot
+        run: echo "CACHE_SLOT=$((${{ github.run_number }} % 3))" >> $GITHUB_ENV
+
       - name: Restore PDFs from cache
         uses: actions/cache@v4
         with:
           path: downloads/
-          key: pdfs-${{ github.run_number % 3 }}
+          key: pdfs-${{ env.CACHE_SLOT }}
           restore-keys: |
             pdfs-
 
