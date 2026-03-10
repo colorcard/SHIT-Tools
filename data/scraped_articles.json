@@ -899,7 +899,7 @@
       "author_name": "Shit King",
       "discipline": "interdisciplinary",
       "weighted_score": 0.0,
-      "rating_count": 8,
+      "rating_count": 10,
       "comment_count": 0
     },
     "c86009db-1fee-4fcf-9b9a-492cb498d489": {
@@ -1416,7 +1416,7 @@
       "author_name": "Lashimer",
       "discipline": "humanities",
       "weighted_score": 0.0,
-      "rating_count": 0,
+      "rating_count": 1,
       "comment_count": 0
     },
     "bbef56b2-fd2d-4dcc-80c0-3f92aae84444": {
@@ -1449,7 +1449,7 @@
       "author_name": "千代温水/DeepJohn",
       "discipline": "law_social",
       "weighted_score": 3.902928268173886,
-      "rating_count": 14,
+      "rating_count": 16,
       "comment_count": 0
     },
     "baa9b107-732a-45af-8880-a3f6691d15ed": {
@@ -1625,7 +1625,7 @@
       "author_name": "Shit_Producer",
       "discipline": "science",
       "weighted_score": 0.0,
-      "rating_count": 3,
+      "rating_count": 4,
       "comment_count": 0
     },
     "b72525f0-a842-4bef-bede-f63ef079006a": {
@@ -1900,7 +1900,7 @@
       "author_name": "排泄运动前de小屁风",
       "discipline": "science",
       "weighted_score": 0.0,
-      "rating_count": 3,
+      "rating_count": 4,
       "comment_count": 0
     },
     "af43757f-613b-4761-aa37-1b2204d39d8f": {
@@ -1955,7 +1955,7 @@
       "author_name": "昭昭",
       "discipline": "interdisciplinary",
       "weighted_score": 3.951464134086943,
-      "rating_count": 17,
+      "rating_count": 23,
       "comment_count": 0
     },
     "acb49a35-6b87-4be9-9b6c-c7b7a33c922d": {
@@ -2258,12 +2258,12 @@
     "a4893cd9-0a22-4528-96dc-7e472274aa46": {
       "id": "a4893cd9-0a22-4528-96dc-7e472274aa46",
       "manuscript_title": "变质香蕉比正常香蕉更通便的机制研究与临床观察",
-      "zone": "sediment",
+      "zone": "septic",
       "created_at": "2026-03-03T10:55:44.052993Z",
       "author_name": "虫且蘸酱裹厕纸",
       "discipline": "medical",
       "weighted_score": 3.6957958606045502,
-      "rating_count": 31,
+      "rating_count": 32,
       "comment_count": 0
     },
     "a37f6425-d215-416c-94f1-b09d056a1035": {
@@ -2307,7 +2307,7 @@
       "author_name": "逃离实验室的Arabidopsis",
       "discipline": "humanities",
       "weighted_score": 3.7223426145391088,
-      "rating_count": 5,
+      "rating_count": 6,
       "comment_count": 0
     },
     "a2dedb64-0f40-418f-a0f8-0455265b4fda": {
@@ -3242,7 +3242,7 @@
       "author_name": "巨能拉",
       "discipline": "interdisciplinary",
       "weighted_score": 3.944530438956506,
-      "rating_count": 16,
+      "rating_count": 19,
       "comment_count": 0
     },
     "88652166-efcf-4cad-981f-4e41242d25d0": {
@@ -4331,7 +4331,7 @@
       "author_name": "Selenodesy",
       "discipline": "interdisciplinary",
       "weighted_score": 0.0,
-      "rating_count": 8,
+      "rating_count": 9,
       "comment_count": 0
     },
     "6a7aa2dc-9337-4790-8c59-e4d59e213ce7": {
@@ -4650,7 +4650,7 @@
       "author_name": "卑微主研PHDog",
       "discipline": "interdisciplinary",
       "weighted_score": 4.122342614539109,
-      "rating_count": 12,
+      "rating_count": 17,
       "comment_count": 0
     },
     "63eb4f1a-7a71-494f-99e1-ca919755ab89": {
@@ -4716,7 +4716,7 @@
       "author_name": "井底之蛙想看天",
       "discipline": "interdisciplinary",
       "weighted_score": 0.0,
-      "rating_count": 3,
+      "rating_count": 5,
       "comment_count": 0
     },
     "6307ad80-6be7-4e6d-ba29-a202d09aba56": {
@@ -5156,7 +5156,7 @@
       "author_name": "陈杰尼",
       "discipline": "engineering",
       "weighted_score": 4.134309422724629,
-      "rating_count": 9,
+      "rating_count": 12,
       "comment_count": 0
     },
     "58bef872-e321-48fd-8ac7-4df91a2938ba": {
@@ -5794,7 +5794,7 @@
       "author_name": "地外来屎",
       "discipline": "science",
       "weighted_score": 0.0,
-      "rating_count": 4,
+      "rating_count": 6,
       "comment_count": 0
     },
     "4abe6f9c-4e01-4e83-82ed-887650709da7": {
@@ -6366,7 +6366,7 @@
       "author_name": "胡小弟",
       "discipline": "interdisciplinary",
       "weighted_score": 0.0,
-      "rating_count": 2,
+      "rating_count": 3,
       "comment_count": 0
     },
     "3aea3b91-0cfb-4f52-87ba-fd6f43fc782d": {
@@ -6410,7 +6410,7 @@
       "author_name": "aaa小蜜蜂",
       "discipline": "science",
       "weighted_score": 4.402928268173886,
-      "rating_count": 6,
+      "rating_count": 7,
       "comment_count": 0
     },
     "3a13130e-de7f-453b-a399-ae856981b1ed": {
@@ -6421,7 +6421,7 @@
       "author_name": "鲁迅",
       "discipline": "interdisciplinary",
       "weighted_score": 0.0,
-      "rating_count": 10,
+      "rating_count": 18,
       "comment_count": 0
     },
     "3987c5ec-6beb-45f6-a74c-10efaaead833": {
@@ -8291,7 +8291,7 @@
       "author_name": "Ovo粪坑监控ovO",
       "discipline": "humanities",
       "weighted_score": 4.60195217878259,
-      "rating_count": 14,
+      "rating_count": 17,
       "comment_count": 0
     },
     "08726d4a-fd39-4a57-8d25-1b14a9343f85": {
@@ -8616,12 +8616,12 @@
     "015c9ae5-b32f-459c-8e88-2a6020d1da5c": {
       "id": "015c9ae5-b32f-459c-8e88-2a6020d1da5c",
       "manuscript_title": "汤圆就应该是圆的——一项对不圆汤圆的形态学批判研究",
-      "zone": "latrine",
+      "zone": "sediment",
       "created_at": "2026-03-03T11:34:12.208573Z",
       "author_name": "爱吃鸳鸯锅",
       "discipline": "interdisciplinary",
       "weighted_score": 3.576464134086943,
-      "rating_count": 19,
+      "rating_count": 30,
       "comment_count": 0
     },
     "0092f0fc-68d0-49c4-b087-5619c4c68403": {
@@ -8632,7 +8632,7 @@
       "author_name": "Arando",
       "discipline": "medical",
       "weighted_score": 4.152928268173886,
-      "rating_count": 10,
+      "rating_count": 12,
       "comment_count": 0
     },
     "e0a863e1-f861-482f-a1c3-32bd1d6e92d4": {
@@ -8885,7 +8885,7 @@
       "author_name": "桥边红药",
       "discipline": "science",
       "weighted_score": 3.951464134086943,
-      "rating_count": 20,
+      "rating_count": 22,
       "comment_count": 0
     },
     "e85ce797-2f17-4626-88de-d9d8410331e6": {
@@ -9226,7 +9226,7 @@
       "author_name": "Shabo Cheng",
       "discipline": "engineering",
       "weighted_score": 4.152928268173886,
-      "rating_count": 22,
+      "rating_count": 24,
       "comment_count": 0
     },
     "ff5132d9-b745-4b9f-ac28-d9de852667ee": {
@@ -9545,7 +9545,7 @@
       "author_name": "魔法披风",
       "discipline": "humanities",
       "weighted_score": 0.0,
-      "rating_count": 1,
+      "rating_count": 2,
       "comment_count": 0
     },
     "fd9bac9c-6e36-4f61-850f-be457d9ef637": {
@@ -10282,7 +10282,7 @@
       "author_name": "英克",
       "discipline": "interdisciplinary",
       "weighted_score": 4.704071405244145,
-      "rating_count": 63,
+      "rating_count": 64,
       "comment_count": 0
     },
     "a5ee27fc-1d64-4045-b025-d2148fbf54a4": {
@@ -10403,7 +10403,7 @@
       "author_name": "Duamu",
       "discipline": "science",
       "weighted_score": 4.239214252019321,
-      "rating_count": 33,
+      "rating_count": 34,
       "comment_count": 0
     },
     "a028aa24-c661-4ecf-b9d1-2c057758b29e": {
@@ -10458,7 +10458,7 @@
       "author_name": "soraincloud",
       "discipline": "interdisciplinary",
       "weighted_score": 4.452234261453911,
-      "rating_count": 52,
+      "rating_count": 54,
       "comment_count": 0
     },
     "9d0da8ec-d3cf-42b0-89f4-bd4c2878634a": {
@@ -10920,7 +10920,7 @@
       "author_name": "锦衣夜行",
       "discipline": "interdisciplinary",
       "weighted_score": 4.195172130069117,
-      "rating_count": 36,
+      "rating_count": 37,
       "comment_count": 0
     },
     "8ecf5196-da98-48b0-bf5b-30622ae476b2": {
@@ -11217,7 +11217,7 @@
       "author_name": "DeadlyPig",
       "discipline": "engineering",
       "weighted_score": 4.642310755661326,
-      "rating_count": 54,
+      "rating_count": 55,
       "comment_count": 0
     },
     "84b0ea87-a35e-472c-90e1-d7e575c08f96": {
@@ -11789,7 +11789,7 @@
       "author_name": "Родители Вячеслава Баранникова",
       "discipline": "interdisciplinary",
       "weighted_score": 4.5785155015803385,
-      "rating_count": 49,
+      "rating_count": 50,
       "comment_count": 0
     },
     "732b05d5-5992-4051-8e27-21da406020bc": {
@@ -11910,7 +11910,7 @@
       "author_name": "甘露糖",
       "discipline": "interdisciplinary",
       "weighted_score": 4.140674746227565,
-      "rating_count": 45,
+      "rating_count": 46,
       "comment_count": 0
     },
     "6c50895f-df35-4515-bcdd-f39a9b56ddca": {
@@ -12064,7 +12064,7 @@
       "author_name": "w.w.shit",
       "discipline": "humanities",
       "weighted_score": 4.395993895163735,
-      "rating_count": 63,
+      "rating_count": 64,
       "comment_count": 0
     },
     "69217e78-ea4a-416c-b49d-b8c009396c12": {
@@ -14033,7 +14033,7 @@
       "author_name": "Infinite Shit",
       "discipline": "science",
       "weighted_score": 4.786629842561262,
-      "rating_count": 46,
+      "rating_count": 47,
       "comment_count": 0
     },
     "211fda93-b9bb-4e0d-84eb-60c72cd1ede1": {
@@ -14847,7 +14847,7 @@
       "author_name": "匿跌老湾",
       "discipline": "science",
       "weighted_score": 4.588906087791301,
-      "rating_count": 34,
+      "rating_count": 35,
       "comment_count": 0
     },
     "0410a065-bfee-4337-9cfa-618d13c79d1d": {
@@ -15045,7 +15045,7 @@
       "author_name": "汐見螢",
       "discipline": "interdisciplinary",
       "weighted_score": 4.6421328621557105,
-      "rating_count": 46,
+      "rating_count": 47,
       "comment_count": 0
     },
     "bf334193-9010-4ea2-8861-2b96480fe79d": {
@@ -15804,7 +15804,7 @@
       "author_name": "带了个鱼",
       "discipline": "humanities",
       "weighted_score": 4.6300364483552245,
-      "rating_count": 54,
+      "rating_count": 55,
       "comment_count": 0
     },
     "d8165104-8bc7-4784-a980-068adbcdd232": {
@@ -16101,7 +16101,7 @@
       "author_name": "夜郎少女的梦",
       "discipline": "humanities",
       "weighted_score": 4.321503492995008,
-      "rating_count": 87,
+      "rating_count": 89,
       "comment_count": 0
     },
     "e2748af7-e1c6-4390-aa0f-dc5c10973a0a": {
@@ -17047,7 +17047,7 @@
       "author_name": "雷霆弟",
       "discipline": "interdisciplinary",
       "weighted_score": 4.419326501730846,
-      "rating_count": 43,
+      "rating_count": 44,
       "comment_count": 0
     },
     "fef2bbb3-ba61-416c-b9eb-6dd8f7add197": {
@@ -17091,7 +17091,7 @@
       "author_name": "wabn",
       "discipline": "interdisciplinary",
       "weighted_score": 4.900372147749599,
-      "rating_count": 3500,
+      "rating_count": 3510,
       "comment_count": 0
     },
     "b5b882bd-4ca3-4b89-aec0-a9a597f6ed73": {
@@ -17234,7 +17234,7 @@
       "author_name": "Truth of the shit",
       "discipline": "law_social",
       "weighted_score": 4.882728783971232,
-      "rating_count": 587,
+      "rating_count": 589,
       "comment_count": 0
     },
     "776f5acb-adfd-41df-8b58-c1105975e4e0": {
@@ -17256,7 +17256,7 @@
       "author_name": "法式螺翔 (KSY) 🐌⚖️",
       "discipline": "law_social",
       "weighted_score": 4.910876046283016,
-      "rating_count": 820,
+      "rating_count": 821,
       "comment_count": 0
     },
     "7276d656-e24e-41af-9c78-c1f854d23ced": {
@@ -17278,7 +17278,7 @@
       "author_name": "忘情水喝了窜稀",
       "discipline": "interdisciplinary",
       "weighted_score": 4.836823825438096,
-      "rating_count": 222,
+      "rating_count": 223,
       "comment_count": 0
     },
     "68ece370-5bf8-4d57-ac1b-883020b25877": {
@@ -17289,7 +17289,7 @@
       "author_name": "inFPTO",
       "discipline": "interdisciplinary",
       "weighted_score": 4.907247438149068,
-      "rating_count": 137,
+      "rating_count": 138,
       "comment_count": 0
     },
     "637c4358-0fc0-42fb-825c-b76b52616c59": {
@@ -17322,7 +17322,7 @@
       "author_name": "lei285714",
       "discipline": "interdisciplinary",
       "weighted_score": 4.861371465957685,
-      "rating_count": 1521,
+      "rating_count": 1525,
       "comment_count": 0
     },
     "56df82e4-24ea-4915-8428-4aec70f858f5": {
@@ -17366,7 +17366,7 @@
       "author_name": "丰川翔",
       "discipline": "engineering",
       "weighted_score": 4.828863190985998,
-      "rating_count": 237,
+      "rating_count": 238,
       "comment_count": 0
     },
     "40fdfea1-3eb9-4fae-9cbb-ea63b37cd374": {
@@ -17399,7 +17399,7 @@
       "author_name": "mahpmice",
       "discipline": "interdisciplinary",
       "weighted_score": 4.536704584039346,
-      "rating_count": 219,
+      "rating_count": 220,
       "comment_count": 0
     },
     "38d77f47-a0cf-4d19-ac42-a12751e41e59": {
@@ -17454,7 +17454,7 @@
       "author_name": "Leo大王",
       "discipline": "science",
       "weighted_score": 4.735013595815044,
-      "rating_count": 128,
+      "rating_count": 129,
       "comment_count": 0
     },
     "1fac16ca-de1a-4821-a07f-3b22b2934f10": {
@@ -17465,7 +17465,7 @@
       "author_name": "毛肚",
       "discipline": "humanities",
       "weighted_score": 4.867513812906782,
-      "rating_count": 550,
+      "rating_count": 557,
       "comment_count": 0
     },
     "1b913481-9200-4493-9233-13ea2dc41ac7": {
@@ -17498,7 +17498,7 @@
       "author_name": "祝你拉的顺畅",
       "discipline": "law_social",
       "weighted_score": 4.815618216143927,
-      "rating_count": 117,
+      "rating_count": 118,
       "comment_count": 0
     },
     "1480b834-f051-41b0-8a47-2b6d0b0df0b2": {
@@ -17509,7 +17509,7 @@
       "author_name": "holy shit",
       "discipline": "interdisciplinary",
       "weighted_score": 4.847649223275427,
-      "rating_count": 1373,
+      "rating_count": 1376,
       "comment_count": 0
     },
     "0f283551-f349-4ae1-87f3-9394841bacb3": {
@@ -17641,7 +17641,7 @@
       "author_name": "左旋多巴",
       "discipline": "interdisciplinary",
       "weighted_score": 4.912522440289801,
-      "rating_count": 1129,
+      "rating_count": 1131,
       "comment_count": 0
     },
     "d2841233-418d-4d05-9ce5-38249e85c05f": {
@@ -17663,7 +17663,7 @@
       "author_name": "Thejiang",
       "discipline": "humanities",
       "weighted_score": 4.7692097889868315,
-      "rating_count": 178,
+      "rating_count": 179,
       "comment_count": 0
     },
     "d70a60a4-7d6c-419e-b205-01e82dcadac0": {
@@ -17762,7 +17762,7 @@
       "author_name": "Yunlk",
       "discipline": "interdisciplinary",
       "weighted_score": 4.664313412561792,
-      "rating_count": 164,
+      "rating_count": 165,
       "comment_count": 0
     },
     "ba748e93-251a-46d4-8478-53798897414e": {
@@ -18059,7 +18059,7 @@
       "author_name": "阿泓",
       "discipline": "humanities",
       "weighted_score": 3.5839125116876644,
-      "rating_count": 50,
+      "rating_count": 51,
       "comment_count": 0
     },
     "9c28e279-cb59-415f-a8ef-52380345f8cb": {
@@ -18158,7 +18158,7 @@
       "author_name": "浪漫的真爱",
       "discipline": "science",
       "weighted_score": 3.5383741207784656,
-      "rating_count": 44,
+      "rating_count": 45,
       "comment_count": 0
     },
     "83b80a8e-e77f-4772-b3fc-7ac8d93ef6b9": {
@@ -18213,7 +18213,7 @@
       "author_name": "SAwassnn",
       "discipline": "law_social",
       "weighted_score": 3.363257124195316,
-      "rating_count": 65,
+      "rating_count": 66,
       "comment_count": 0
     },
     "7f3ffaf9-ddf9-43c5-8078-9ce372c5a0e7": {
@@ -19038,7 +19038,7 @@
       "author_name": "构思一坨",
       "discipline": "interdisciplinary",
       "weighted_score": 3.368933016760868,
-      "rating_count": 72,
+      "rating_count": 75,
       "comment_count": 0
     },
     "149d7a16-6b47-4729-a794-783b922785d1": {
@@ -19676,9 +19676,9 @@
       "author_name": "Dr.TonyJ",
       "discipline": "law_social",
       "weighted_score": 4.836769811082501,
-      "rating_count": 578,
+      "rating_count": 579,
       "comment_count": 0
     }
   },
-  "last_update": "2026-03-10T05:09:43.463883"
+  "last_update": "2026-03-10T13:11:10.093950"
 }
