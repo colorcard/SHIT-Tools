@@ -23,7 +23,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: downloads/
-          key: pdfs-${{ github.run_id }}
+          key: pdfs-${{ github.run_number % 3 }}
           restore-keys: |
             pdfs-
 
