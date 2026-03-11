@@ -3237,12 +3237,12 @@
     "84836806-9f25-435d-9df0-0a50d6bedd6f": {
       "id": "84836806-9f25-435d-9df0-0a50d6bedd6f",
       "manuscript_title": "隔夜蒜薹与地三鲜口感“夯”性探究",
-      "zone": "latrine",
+      "zone": "septic",
       "created_at": "2026-03-03T09:30:49.646647Z",
       "author_name": "巨能拉",
       "discipline": "interdisciplinary",
       "weighted_score": 3.944530438956506,
-      "rating_count": 27,
+      "rating_count": 30,
       "comment_count": 0
     },
     "88652166-efcf-4cad-981f-4e41242d25d0": {
@@ -4331,7 +4331,7 @@
       "author_name": "Selenodesy",
       "discipline": "interdisciplinary",
       "weighted_score": 0.0,
-      "rating_count": 12,
+      "rating_count": 13,
       "comment_count": 0
     },
     "6a7aa2dc-9337-4790-8c59-e4d59e213ce7": {
@@ -8632,7 +8632,7 @@
       "author_name": "Arando",
       "discipline": "medical",
       "weighted_score": 4.152928268173886,
-      "rating_count": 13,
+      "rating_count": 16,
       "comment_count": 0
     },
     "e0a863e1-f861-482f-a1c3-32bd1d6e92d4": {
@@ -10036,10 +10036,10 @@
       "id": "ad1570af-5513-43fa-aafc-119b2287ac13",
       "manuscript_title": "观测即归零：从薛定谔的猫到黄金体验镇魂曲——拼多多砍一刀如何让量子力学与替身能力在最后一刀上达成共识",
       "zone": "septic",
-      "created_at": "2026-03-03T14:03:12.651207+00:00",
+      "created_at": "2026-03-03T14:03:12.651207Z",
       "author_name": "sweet",
       "discipline": "science",
-      "weighted_score": 4.315308923148797,
+      "weighted_score": 4.315292826817389,
       "rating_count": 37,
       "comment_count": 0
     },
@@ -10938,10 +10938,10 @@
       "id": "8d8c5051-b0dd-4c56-8e74-7cc921a72fbd",
       "manuscript_title": "如厕忘记带纸的尴尬处境对后续生活影响：一项基于个案的研究",
       "zone": "septic",
-      "created_at": "2026-03-03T14:10:41.512832+00:00",
+      "created_at": "2026-03-03T14:10:41.512832Z",
       "author_name": "每天都要拉翔",
       "discipline": "interdisciplinary",
-      "weighted_score": 4.157437069665521,
+      "weighted_score": 4.157421739826084,
       "rating_count": 39,
       "comment_count": 0
     },
@@ -12698,12 +12698,12 @@
       "id": "51cbf247-d3fa-433e-b8b0-126fef8d1903",
       "manuscript_title": "信息熵视角下抖音及小红书平台的内容分布与演化特征——以“我的刀盾”为例",
       "zone": "septic",
-      "created_at": "2026-03-03T13:59:28.065747+00:00",
+      "created_at": "2026-03-03T13:59:28.065747Z",
       "author_name": "思路零",
       "discipline": "interdisciplinary",
-      "weighted_score": 4.0746387693129105,
+      "weighted_score": 4.074620373505587,
       "rating_count": 32,
-      "comment_count": 1
+      "comment_count": 0
     },
     "51c4fd3f-c43a-4978-b565-87e704b4cbbd": {
       "id": "51c4fd3f-c43a-4978-b565-87e704b4cbbd",
@@ -14033,7 +14033,7 @@
       "author_name": "Infinite Shit",
       "discipline": "science",
       "weighted_score": 4.786629842561262,
-      "rating_count": 47,
+      "rating_count": 48,
       "comment_count": 0
     },
     "211fda93-b9bb-4e0d-84eb-60c72cd1ede1": {
@@ -15804,7 +15804,7 @@
       "author_name": "带了个鱼",
       "discipline": "humanities",
       "weighted_score": 4.6300364483552245,
-      "rating_count": 55,
+      "rating_count": 56,
       "comment_count": 0
     },
     "d8165104-8bc7-4784-a980-068adbcdd232": {
@@ -16090,7 +16090,7 @@
       "author_name": "波波大王",
       "discipline": "interdisciplinary",
       "weighted_score": 4.12810314090821,
-      "rating_count": 44,
+      "rating_count": 45,
       "comment_count": 0
     },
     "e25000b6-64a3-419f-8e73-0a4b9e192bfc": {
@@ -17091,7 +17091,7 @@
       "author_name": "wabn",
       "discipline": "interdisciplinary",
       "weighted_score": 4.900372147749599,
-      "rating_count": 3520,
+      "rating_count": 3524,
       "comment_count": 0
     },
     "b5b882bd-4ca3-4b89-aec0-a9a597f6ed73": {
@@ -17289,7 +17289,7 @@
       "author_name": "inFPTO",
       "discipline": "interdisciplinary",
       "weighted_score": 4.907247438149068,
-      "rating_count": 140,
+      "rating_count": 141,
       "comment_count": 0
     },
     "637c4358-0fc0-42fb-825c-b76b52616c59": {
@@ -17377,7 +17377,7 @@
       "author_name": "真名",
       "discipline": "medical",
       "weighted_score": 4.823154235349384,
-      "rating_count": 250,
+      "rating_count": 251,
       "comment_count": 0
     },
     "40cd854d-afe2-445b-90e0-fcd65632690b": {
@@ -17465,7 +17465,7 @@
       "author_name": "毛肚",
       "discipline": "humanities",
       "weighted_score": 4.867513812906782,
-      "rating_count": 563,
+      "rating_count": 564,
       "comment_count": 0
     },
     "1b913481-9200-4493-9233-13ea2dc41ac7": {
@@ -17476,7 +17476,7 @@
       "author_name": "林燮",
       "discipline": "interdisciplinary",
       "weighted_score": 4.810961478063807,
-      "rating_count": 299,
+      "rating_count": 300,
       "comment_count": 0
     },
     "19f0e2de-319d-4df5-af33-85111e8b0c2d": {
@@ -17509,7 +17509,7 @@
       "author_name": "holy shit",
       "discipline": "interdisciplinary",
       "weighted_score": 4.847649223275427,
-      "rating_count": 1383,
+      "rating_count": 1384,
       "comment_count": 0
     },
     "0f283551-f349-4ae1-87f3-9394841bacb3": {
@@ -17575,7 +17575,7 @@
       "author_name": "怒焰屠神灭世狂尊",
       "discipline": "humanities",
       "weighted_score": 4.8173504537604,
-      "rating_count": 147,
+      "rating_count": 148,
       "comment_count": 0
     },
     "01263260-3999-466b-bef5-10aa69f3d5a8": {
@@ -17641,7 +17641,7 @@
       "author_name": "左旋多巴",
       "discipline": "interdisciplinary",
       "weighted_score": 4.912522440289801,
-      "rating_count": 1136,
+      "rating_count": 1137,
       "comment_count": 0
     },
     "d2841233-418d-4d05-9ce5-38249e85c05f": {
@@ -18125,7 +18125,7 @@
       "author_name": "DICK KINSON",
       "discipline": "humanities",
       "weighted_score": 3.326117130726955,
-      "rating_count": 99,
+      "rating_count": 100,
       "comment_count": 0
     },
     "89afe4b8-3bdd-4286-878d-d95efa8b2738": {
@@ -18587,7 +18587,7 @@
       "author_name": "Lyxxx",
       "discipline": "interdisciplinary",
       "weighted_score": 3.461436474241543,
-      "rating_count": 36,
+      "rating_count": 37,
       "comment_count": 0
     },
     "479207ff-3bff-4be0-a7a2-a89a11f422ad": {
@@ -19038,7 +19038,7 @@
       "author_name": "构思一坨",
       "discipline": "interdisciplinary",
       "weighted_score": 3.368933016760868,
-      "rating_count": 76,
+      "rating_count": 77,
       "comment_count": 0
     },
     "149d7a16-6b47-4729-a794-783b922785d1": {
@@ -19214,7 +19214,7 @@
       "author_name": "加V看蟹黄堡秘方",
       "discipline": "humanities",
       "weighted_score": 3.413593623837679,
-      "rating_count": 47,
+      "rating_count": 48,
       "comment_count": 0
     },
     "c4b39c3a-9bdc-4695-9756-adc43f9177be": {
@@ -19665,7 +19665,7 @@
       "author_name": "答辩超人",
       "discipline": "medical",
       "weighted_score": 4.6864523717628455,
-      "rating_count": 137,
+      "rating_count": 138,
       "comment_count": 0
     },
     "9f492f9e-754e-4fa0-870e-505431ee94d0": {
@@ -19680,5 +19680,5 @@
       "comment_count": 0
     }
   },
-  "last_update": "2026-03-11T13:10:51.198793"
+  "last_update": "2026-03-11T20:29:55.386332"
 }
