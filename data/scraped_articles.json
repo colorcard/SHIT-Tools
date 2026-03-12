@@ -899,7 +899,7 @@
       "author_name": "Shit King",
       "discipline": "interdisciplinary",
       "weighted_score": 0.0,
-      "rating_count": 12,
+      "rating_count": 14,
       "comment_count": 0
     },
     "c86009db-1fee-4fcf-9b9a-492cb498d489": {
@@ -1449,7 +1449,7 @@
       "author_name": "千代温水/DeepJohn",
       "discipline": "law_social",
       "weighted_score": 3.902928268173886,
-      "rating_count": 19,
+      "rating_count": 21,
       "comment_count": 0
     },
     "baa9b107-732a-45af-8880-a3f6691d15ed": {
@@ -1625,7 +1625,7 @@
       "author_name": "Shit_Producer",
       "discipline": "science",
       "weighted_score": 0.0,
-      "rating_count": 5,
+      "rating_count": 6,
       "comment_count": 0
     },
     "b72525f0-a842-4bef-bede-f63ef079006a": {
@@ -1856,7 +1856,7 @@
       "author_name": "Dr.Sheet",
       "discipline": "law_social",
       "weighted_score": 4.124367289175979,
-      "rating_count": 47,
+      "rating_count": 48,
       "comment_count": 0
     },
     "b0d05b29-3c68-4cfd-8016-a8c47a1c5f22": {
@@ -4331,7 +4331,7 @@
       "author_name": "Selenodesy",
       "discipline": "interdisciplinary",
       "weighted_score": 0.0,
-      "rating_count": 13,
+      "rating_count": 14,
       "comment_count": 0
     },
     "6a7aa2dc-9337-4790-8c59-e4d59e213ce7": {
@@ -4661,7 +4661,7 @@
       "author_name": "six",
       "discipline": "interdisciplinary",
       "weighted_score": 0.0,
-      "rating_count": 13,
+      "rating_count": 14,
       "comment_count": 0
     },
     "63ac6768-179a-4b6c-ac1e-8bb250ed851c": {
@@ -5794,7 +5794,7 @@
       "author_name": "地外来屎",
       "discipline": "science",
       "weighted_score": 0.0,
-      "rating_count": 8,
+      "rating_count": 10,
       "comment_count": 0
     },
     "4abe6f9c-4e01-4e83-82ed-887650709da7": {
@@ -6366,7 +6366,7 @@
       "author_name": "胡小弟",
       "discipline": "interdisciplinary",
       "weighted_score": 0.0,
-      "rating_count": 3,
+      "rating_count": 4,
       "comment_count": 0
     },
     "3aea3b91-0cfb-4f52-87ba-fd6f43fc782d": {
@@ -6410,7 +6410,7 @@
       "author_name": "aaa小蜜蜂",
       "discipline": "science",
       "weighted_score": 4.402928268173886,
-      "rating_count": 7,
+      "rating_count": 10,
       "comment_count": 0
     },
     "3a13130e-de7f-453b-a399-ae856981b1ed": {
@@ -6674,7 +6674,7 @@
       "author_name": "Eugeniee",
       "discipline": "engineering",
       "weighted_score": 4.152928268173886,
-      "rating_count": 7,
+      "rating_count": 8,
       "comment_count": 0
     },
     "305044fd-7f89-4cf4-a415-623fcdd6186d": {
@@ -6861,7 +6861,7 @@
       "author_name": "Z紫罗兰",
       "discipline": "science",
       "weighted_score": 3.902928268173886,
-      "rating_count": 7,
+      "rating_count": 8,
       "comment_count": 0
     },
     "2a7dd709-5ef4-4860-995b-454c3b319c9c": {
@@ -8291,7 +8291,7 @@
       "author_name": "Ovo粪坑监控ovO",
       "discipline": "humanities",
       "weighted_score": 4.60195217878259,
-      "rating_count": 18,
+      "rating_count": 20,
       "comment_count": 0
     },
     "08726d4a-fd39-4a57-8d25-1b14a9343f85": {
@@ -8632,7 +8632,7 @@
       "author_name": "Arando",
       "discipline": "medical",
       "weighted_score": 4.152928268173886,
-      "rating_count": 16,
+      "rating_count": 17,
       "comment_count": 0
     },
     "e0a863e1-f861-482f-a1c3-32bd1d6e92d4": {
@@ -8709,7 +8709,7 @@
       "author_name": "屎王拉通地铁线",
       "discipline": "interdisciplinary",
       "weighted_score": 4.152928268173886,
-      "rating_count": 4,
+      "rating_count": 5,
       "comment_count": 0
     },
     "e34e781f-f24e-44ed-9fa9-6b2aa75ef72b": {
@@ -9221,12 +9221,12 @@
     "f5ed58b9-40f7-4798-b22c-abf4c28778c4": {
       "id": "f5ed58b9-40f7-4798-b22c-abf4c28778c4",
       "manuscript_title": "如厕行为中排泄与未排泄量子叠加态及观测坍缩效应研究",
-      "zone": "latrine",
+      "zone": "septic",
       "created_at": "2026-02-22T14:27:59.999401Z",
       "author_name": "Shabo Cheng",
       "discipline": "engineering",
       "weighted_score": 4.152928268173886,
-      "rating_count": 27,
+      "rating_count": 30,
       "comment_count": 0
     },
     "ff5132d9-b745-4b9f-ac28-d9de852667ee": {
@@ -10282,7 +10282,7 @@
       "author_name": "英克",
       "discipline": "interdisciplinary",
       "weighted_score": 4.704071405244145,
-      "rating_count": 64,
+      "rating_count": 65,
       "comment_count": 0
     },
     "a5ee27fc-1d64-4045-b025-d2148fbf54a4": {
@@ -10304,7 +10304,7 @@
       "author_name": "AAA大运蒋哥（专跑国道）",
       "discipline": "science",
       "weighted_score": 4.09761386682961,
-      "rating_count": 36,
+      "rating_count": 37,
       "comment_count": 0
     },
     "a54b4c87-e295-42c0-8940-355ce67b8c59": {
@@ -12185,7 +12185,7 @@
       "author_name": "韩侂史",
       "discipline": "interdisciplinary",
       "weighted_score": 4.23697373617746,
-      "rating_count": 51,
+      "rating_count": 53,
       "comment_count": 0
     },
     "61faee99-ea9a-4968-afdc-7f6c5567818f": {
@@ -14033,7 +14033,7 @@
       "author_name": "Infinite Shit",
       "discipline": "science",
       "weighted_score": 4.786629842561262,
-      "rating_count": 48,
+      "rating_count": 49,
       "comment_count": 0
     },
     "211fda93-b9bb-4e0d-84eb-60c72cd1ede1": {
@@ -15023,7 +15023,7 @@
       "author_name": "胡灏苒博士",
       "discipline": "interdisciplinary",
       "weighted_score": 4.637310186752793,
-      "rating_count": 75,
+      "rating_count": 76,
       "comment_count": 0
     },
     "bde4fabb-773f-4371-a7c0-d4c8fa17c68c": {
@@ -16090,7 +16090,7 @@
       "author_name": "波波大王",
       "discipline": "interdisciplinary",
       "weighted_score": 4.12810314090821,
-      "rating_count": 45,
+      "rating_count": 46,
       "comment_count": 0
     },
     "e25000b6-64a3-419f-8e73-0a4b9e192bfc": {
@@ -16101,7 +16101,7 @@
       "author_name": "夜郎少女的梦",
       "discipline": "humanities",
       "weighted_score": 4.321503492995008,
-      "rating_count": 91,
+      "rating_count": 93,
       "comment_count": 0
     },
     "e2748af7-e1c6-4390-aa0f-dc5c10973a0a": {
@@ -17091,7 +17091,7 @@
       "author_name": "wabn",
       "discipline": "interdisciplinary",
       "weighted_score": 4.900372147749599,
-      "rating_count": 3524,
+      "rating_count": 3528,
       "comment_count": 0
     },
     "b5b882bd-4ca3-4b89-aec0-a9a597f6ed73": {
@@ -17124,7 +17124,7 @@
       "author_name": "拖拖",
       "discipline": "interdisciplinary",
       "weighted_score": 4.84265621337223,
-      "rating_count": 196,
+      "rating_count": 198,
       "comment_count": 0
     },
     "a8ed9637-7e50-4e90-acdc-d3f723fb6834": {
@@ -17135,7 +17135,7 @@
       "author_name": "怒焰屠神灭世狂尊",
       "discipline": "humanities",
       "weighted_score": 4.712034064887115,
-      "rating_count": 107,
+      "rating_count": 108,
       "comment_count": 0
     },
     "a18c10ea-7a13-4736-aa93-bbf5836f2694": {
@@ -17256,7 +17256,7 @@
       "author_name": "法式螺翔 (KSY) 🐌⚖️",
       "discipline": "law_social",
       "weighted_score": 4.910876046283016,
-      "rating_count": 822,
+      "rating_count": 823,
       "comment_count": 0
     },
     "7276d656-e24e-41af-9c78-c1f854d23ced": {
@@ -17289,7 +17289,7 @@
       "author_name": "inFPTO",
       "discipline": "interdisciplinary",
       "weighted_score": 4.907247438149068,
-      "rating_count": 141,
+      "rating_count": 143,
       "comment_count": 0
     },
     "637c4358-0fc0-42fb-825c-b76b52616c59": {
@@ -17465,7 +17465,7 @@
       "author_name": "毛肚",
       "discipline": "humanities",
       "weighted_score": 4.867513812906782,
-      "rating_count": 564,
+      "rating_count": 565,
       "comment_count": 0
     },
     "1b913481-9200-4493-9233-13ea2dc41ac7": {
@@ -17509,7 +17509,7 @@
       "author_name": "holy shit",
       "discipline": "interdisciplinary",
       "weighted_score": 4.847649223275427,
-      "rating_count": 1384,
+      "rating_count": 1388,
       "comment_count": 0
     },
     "0f283551-f349-4ae1-87f3-9394841bacb3": {
@@ -17564,7 +17564,7 @@
       "author_name": "DR.REN",
       "discipline": "medical",
       "weighted_score": 4.845324805645766,
-      "rating_count": 193,
+      "rating_count": 194,
       "comment_count": 0
     },
     "060f5d41-3eec-4063-9921-185571b14cb4": {
@@ -17641,7 +17641,7 @@
       "author_name": "左旋多巴",
       "discipline": "interdisciplinary",
       "weighted_score": 4.912522440289801,
-      "rating_count": 1137,
+      "rating_count": 1139,
       "comment_count": 0
     },
     "d2841233-418d-4d05-9ce5-38249e85c05f": {
@@ -18059,7 +18059,7 @@
       "author_name": "阿泓",
       "discipline": "humanities",
       "weighted_score": 3.5839125116876644,
-      "rating_count": 51,
+      "rating_count": 52,
       "comment_count": 0
     },
     "9c28e279-cb59-415f-a8ef-52380345f8cb": {
@@ -18158,7 +18158,7 @@
       "author_name": "浪漫的真爱",
       "discipline": "science",
       "weighted_score": 3.5383741207784656,
-      "rating_count": 47,
+      "rating_count": 48,
       "comment_count": 0
     },
     "83b80a8e-e77f-4772-b3fc-7ac8d93ef6b9": {
@@ -18213,7 +18213,7 @@
       "author_name": "SAwassnn",
       "discipline": "law_social",
       "weighted_score": 3.363257124195316,
-      "rating_count": 67,
+      "rating_count": 68,
       "comment_count": 0
     },
     "7f3ffaf9-ddf9-43c5-8078-9ce372c5a0e7": {
@@ -18543,7 +18543,7 @@
       "author_name": "大肠杆菌",
       "discipline": "science",
       "weighted_score": 3.6356386197851633,
-      "rating_count": 31,
+      "rating_count": 32,
       "comment_count": 0
     },
     "4ea874c0-91db-4f3e-81e8-249017cb1613": {
@@ -19038,7 +19038,7 @@
       "author_name": "构思一坨",
       "discipline": "interdisciplinary",
       "weighted_score": 3.368933016760868,
-      "rating_count": 77,
+      "rating_count": 78,
       "comment_count": 0
     },
     "149d7a16-6b47-4729-a794-783b922785d1": {
@@ -19654,7 +19654,7 @@
       "author_name": "QH",
       "discipline": "humanities",
       "weighted_score": 4.7843441974228,
-      "rating_count": 143,
+      "rating_count": 144,
       "comment_count": 0
     },
     "ac9c1fbe-2aea-4531-9a58-3fc42a15d0c8": {
@@ -19680,5 +19680,5 @@
       "comment_count": 0
     }
   },
-  "last_update": "2026-03-11T20:29:55.386332"
+  "last_update": "2026-03-12T05:15:39.155760"
 }
