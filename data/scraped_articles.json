@@ -4331,7 +4331,7 @@
       "author_name": "Selenodesy",
       "discipline": "interdisciplinary",
       "weighted_score": 0.0,
-      "rating_count": 20,
+      "rating_count": 21,
       "comment_count": 0
     },
     "6a7aa2dc-9337-4790-8c59-e4d59e213ce7": {
@@ -6366,7 +6366,7 @@
       "author_name": "胡小弟",
       "discipline": "interdisciplinary",
       "weighted_score": 0.0,
-      "rating_count": 5,
+      "rating_count": 6,
       "comment_count": 0
     },
     "3aea3b91-0cfb-4f52-87ba-fd6f43fc782d": {
@@ -10865,7 +10865,7 @@
       "author_name": "赤石大王",
       "discipline": "engineering",
       "weighted_score": 3.850979572582469,
-      "rating_count": 68,
+      "rating_count": 69,
       "comment_count": 0
     },
     "91ad269e-f0ee-411f-a929-144180e025e1": {
@@ -13923,7 +13923,7 @@
       "author_name": "驻厕大史",
       "discipline": "interdisciplinary",
       "weighted_score": 4.22352821099292,
-      "rating_count": 40,
+      "rating_count": 41,
       "comment_count": 0
     },
     "23d7736f-ea10-4e8d-8075-83cd4d768b0c": {
@@ -17091,7 +17091,7 @@
       "author_name": "wabn",
       "discipline": "interdisciplinary",
       "weighted_score": 4.900372147749599,
-      "rating_count": 3537,
+      "rating_count": 3539,
       "comment_count": 0
     },
     "b5b882bd-4ca3-4b89-aec0-a9a597f6ed73": {
@@ -17322,7 +17322,7 @@
       "author_name": "lei285714",
       "discipline": "interdisciplinary",
       "weighted_score": 4.861371465957685,
-      "rating_count": 1532,
+      "rating_count": 1533,
       "comment_count": 0
     },
     "56df82e4-24ea-4915-8428-4aec70f858f5": {
@@ -19680,5 +19680,5 @@
       "comment_count": 0
     }
   },
-  "last_update": "2026-03-13T13:08:41.120653"
+  "last_update": "2026-03-13T20:29:39.936004"
 }
