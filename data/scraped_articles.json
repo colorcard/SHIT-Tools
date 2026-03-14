@@ -2307,7 +2307,7 @@
       "author_name": "逃离实验室的Arabidopsis",
       "discipline": "humanities",
       "weighted_score": 3.7223426145391088,
-      "rating_count": 7,
+      "rating_count": 8,
       "comment_count": 0
     },
     "a2dedb64-0f40-418f-a0f8-0455265b4fda": {
@@ -5156,7 +5156,7 @@
       "author_name": "陈杰尼",
       "discipline": "engineering",
       "weighted_score": 4.134309422724629,
-      "rating_count": 18,
+      "rating_count": 19,
       "comment_count": 0
     },
     "58bef872-e321-48fd-8ac7-4df91a2938ba": {
@@ -11807,10 +11807,10 @@
       "id": "73169cf1-2a92-41c0-a397-d98f3db11f32",
       "manuscript_title": "论移动场景下听觉沉浸的劲爽阈值：坐车听歌与走路听歌的对比研究",
       "zone": "septic",
-      "created_at": "2026-03-03T13:36:55.325111+00:00",
+      "created_at": "2026-03-03T13:36:55.325111Z",
       "author_name": "ggboy",
       "discipline": "humanities",
-      "weighted_score": 3.9457353846807246,
+      "weighted_score": 3.9457207516521717,
       "rating_count": 41,
       "comment_count": 0
     },
@@ -13204,10 +13204,10 @@
       "id": "3d2ec8a7-f56f-40c6-a699-f0d3ba3173d5",
       "manuscript_title": "SHITNet：一种面向生物源性非规则堆积形态的结构感知视觉框架",
       "zone": "septic",
-      "created_at": "2026-03-03T13:32:13.418776+00:00",
+      "created_at": "2026-03-03T13:32:13.418776Z",
       "author_name": "Sky_Shit",
       "discipline": "engineering",
-      "weighted_score": 4.445735384680725,
+      "weighted_score": 4.445720751652172,
       "rating_count": 41,
       "comment_count": 0
     },
@@ -17091,7 +17091,7 @@
       "author_name": "wabn",
       "discipline": "interdisciplinary",
       "weighted_score": 4.900372147749599,
-      "rating_count": 3539,
+      "rating_count": 3541,
       "comment_count": 0
     },
     "b5b882bd-4ca3-4b89-aec0-a9a597f6ed73": {
@@ -17124,7 +17124,7 @@
       "author_name": "拖拖",
       "discipline": "interdisciplinary",
       "weighted_score": 4.84265621337223,
-      "rating_count": 198,
+      "rating_count": 199,
       "comment_count": 0
     },
     "a8ed9637-7e50-4e90-acdc-d3f723fb6834": {
@@ -18770,10 +18770,10 @@
       "id": "331f3405-d682-42e8-bb8f-3f85b5ceea68",
       "manuscript_title": "恐龙与奥特曼战斗的跨尺度动力学分析：从生物力学到能量预算",
       "zone": "sediment",
-      "created_at": "2026-03-03T13:35:43.223383+00:00",
-      "author_name": "Violetzz",
+      "created_at": "2026-03-03T13:35:43.223383Z",
+      "author_name": "猪猪宝贝",
       "discipline": "engineering",
-      "weighted_score": 3.7889244835986253,
+      "weighted_score": 3.7889060877913017,
       "rating_count": 32,
       "comment_count": 0
     },
@@ -19507,10 +19507,10 @@
       "id": "f2d04925-2427-44c7-8297-9a880b4d821d",
       "manuscript_title": "听一万遍《反方向的钟》能否回到假期第一天？——基于万次逆序声波干预的糟粕实证",
       "zone": "sediment",
-      "created_at": "2026-03-03T13:29:29.133668+00:00",
+      "created_at": "2026-03-03T13:29:29.133668Z",
       "author_name": "某废物制造商",
       "discipline": "interdisciplinary",
-      "weighted_score": 3.537628717978665,
+      "weighted_score": 3.537622011173912,
       "rating_count": 93,
       "comment_count": 0
     },
@@ -19680,5 +19680,5 @@
       "comment_count": 0
     }
   },
-  "last_update": "2026-03-13T20:29:39.936004"
+  "last_update": "2026-03-14T05:10:56.566324"
 }
