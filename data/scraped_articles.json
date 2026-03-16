@@ -1449,7 +1449,7 @@
       "author_name": "千代温水/DeepJohn",
       "discipline": "law_social",
       "weighted_score": 3.902928268173886,
-      "rating_count": 27,
+      "rating_count": 28,
       "comment_count": 0
     },
     "baa9b107-732a-45af-8880-a3f6691d15ed": {
@@ -5794,7 +5794,7 @@
       "author_name": "地外来屎",
       "discipline": "science",
       "weighted_score": 0.0,
-      "rating_count": 15,
+      "rating_count": 16,
       "comment_count": 0
     },
     "4abe6f9c-4e01-4e83-82ed-887650709da7": {
@@ -8286,12 +8286,12 @@
     "087ecf46-6682-4715-aaad-06eeab1b1e72": {
       "id": "087ecf46-6682-4715-aaad-06eeab1b1e72",
       "manuscript_title": "硕博英语课程开设的必要性研究",
-      "zone": "latrine",
+      "zone": "septic",
       "created_at": "2026-03-03T08:52:02.812636Z",
       "author_name": "Ovo粪坑监控ovO",
       "discipline": "humanities",
       "weighted_score": 4.60195217878259,
-      "rating_count": 28,
+      "rating_count": 30,
       "comment_count": 0
     },
     "08726d4a-fd39-4a57-8d25-1b14a9343f85": {
@@ -8632,7 +8632,7 @@
       "author_name": "Arando",
       "discipline": "medical",
       "weighted_score": 4.152928268173886,
-      "rating_count": 28,
+      "rating_count": 29,
       "comment_count": 0
     },
     "e0a863e1-f861-482f-a1c3-32bd1d6e92d4": {
@@ -10821,7 +10821,7 @@
       "author_name": "Shit_Producer",
       "discipline": "humanities",
       "weighted_score": 4.372615742632682,
-      "rating_count": 57,
+      "rating_count": 58,
       "comment_count": 0
     },
     "92f67407-26e6-491f-8ec1-5d94c30b1d7f": {
@@ -11217,7 +11217,7 @@
       "author_name": "DeadlyPig",
       "discipline": "engineering",
       "weighted_score": 4.642310755661326,
-      "rating_count": 55,
+      "rating_count": 57,
       "comment_count": 0
     },
     "84b0ea87-a35e-472c-90e1-d7e575c08f96": {
@@ -11646,7 +11646,7 @@
       "author_name": "JordanW",
       "discipline": "interdisciplinary",
       "weighted_score": 4.490292826817389,
-      "rating_count": 38,
+      "rating_count": 39,
       "comment_count": 0
     },
     "770ee982-3330-42aa-92a5-7cc06ab604ac": {
@@ -11910,7 +11910,7 @@
       "author_name": "甘露糖",
       "discipline": "interdisciplinary",
       "weighted_score": 4.140674746227565,
-      "rating_count": 47,
+      "rating_count": 48,
       "comment_count": 0
     },
     "6c50895f-df35-4515-bcdd-f39a9b56ddca": {
@@ -14033,7 +14033,7 @@
       "author_name": "Infinite Shit",
       "discipline": "science",
       "weighted_score": 4.786629842561262,
-      "rating_count": 51,
+      "rating_count": 52,
       "comment_count": 0
     },
     "211fda93-b9bb-4e0d-84eb-60c72cd1ede1": {
@@ -16090,7 +16090,7 @@
       "author_name": "波波大王",
       "discipline": "interdisciplinary",
       "weighted_score": 4.12810314090821,
-      "rating_count": 49,
+      "rating_count": 50,
       "comment_count": 0
     },
     "e25000b6-64a3-419f-8e73-0a4b9e192bfc": {
@@ -16101,7 +16101,7 @@
       "author_name": "夜郎少女的梦",
       "discipline": "humanities",
       "weighted_score": 4.321503492995008,
-      "rating_count": 94,
+      "rating_count": 95,
       "comment_count": 0
     },
     "e2748af7-e1c6-4390-aa0f-dc5c10973a0a": {
@@ -16662,7 +16662,7 @@
       "author_name": "Owen Claussen",
       "discipline": "engineering",
       "weighted_score": 3.9457207516521717,
-      "rating_count": 55,
+      "rating_count": 56,
       "comment_count": 0
     },
     "f183ecbe-7b71-4454-9422-2e82e73aa290": {
@@ -17234,7 +17234,7 @@
       "author_name": "Truth of the shit",
       "discipline": "law_social",
       "weighted_score": 4.882728783971232,
-      "rating_count": 602,
+      "rating_count": 603,
       "comment_count": 0
     },
     "776f5acb-adfd-41df-8b58-c1105975e4e0": {
@@ -17641,7 +17641,7 @@
       "author_name": "左旋多巴",
       "discipline": "interdisciplinary",
       "weighted_score": 4.912522440289801,
-      "rating_count": 1143,
+      "rating_count": 1144,
       "comment_count": 0
     },
     "d2841233-418d-4d05-9ce5-38249e85c05f": {
@@ -19680,5 +19680,5 @@
       "comment_count": 0
     }
   },
-  "last_update": "2026-03-15T20:24:44.403936"
+  "last_update": "2026-03-16T05:49:19.809172"
 }
