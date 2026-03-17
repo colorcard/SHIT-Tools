@@ -4326,12 +4326,12 @@
     "6a99620e-92ad-4fc8-b217-ddff44621345": {
       "id": "6a99620e-92ad-4fc8-b217-ddff44621345",
       "manuscript_title": "前额叶皮质阵亡率与早八课程关联性研究：基于强制眼睑悬吊术的神经认知观察",
-      "zone": "latrine",
+      "zone": "septic",
       "created_at": "2026-03-03T10:25:13.306197Z",
       "author_name": "Selenodesy",
       "discipline": "interdisciplinary",
       "weighted_score": 0.0,
-      "rating_count": 27,
+      "rating_count": 30,
       "comment_count": 0
     },
     "6a7aa2dc-9337-4790-8c59-e4d59e213ce7": {
@@ -4661,7 +4661,7 @@
       "author_name": "six",
       "discipline": "interdisciplinary",
       "weighted_score": 0.0,
-      "rating_count": 22,
+      "rating_count": 23,
       "comment_count": 0
     },
     "63ac6768-179a-4b6c-ac1e-8bb250ed851c": {
@@ -6674,7 +6674,7 @@
       "author_name": "Eugeniee",
       "discipline": "engineering",
       "weighted_score": 4.152928268173886,
-      "rating_count": 12,
+      "rating_count": 13,
       "comment_count": 0
     },
     "305044fd-7f89-4cf4-a415-623fcdd6186d": {
@@ -6861,7 +6861,7 @@
       "author_name": "Z紫罗兰",
       "discipline": "science",
       "weighted_score": 3.902928268173886,
-      "rating_count": 8,
+      "rating_count": 9,
       "comment_count": 0
     },
     "2a7dd709-5ef4-4860-995b-454c3b319c9c": {
@@ -8621,7 +8621,7 @@
       "author_name": "爱吃鸳鸯锅",
       "discipline": "interdisciplinary",
       "weighted_score": 3.576464134086943,
-      "rating_count": 30,
+      "rating_count": 31,
       "comment_count": 0
     },
     "0092f0fc-68d0-49c4-b087-5619c4c68403": {
@@ -14088,7 +14088,7 @@
       "author_name": "shiting",
       "discipline": "science",
       "weighted_score": 4.286803056018798,
-      "rating_count": 37,
+      "rating_count": 38,
       "comment_count": 0
     },
     "1fffae3d-8e6b-43b5-a1ed-583394654466": {
@@ -16101,7 +16101,7 @@
       "author_name": "夜郎少女的梦",
       "discipline": "humanities",
       "weighted_score": 4.321503492995008,
-      "rating_count": 95,
+      "rating_count": 96,
       "comment_count": 0
     },
     "e2748af7-e1c6-4390-aa0f-dc5c10973a0a": {
@@ -17289,7 +17289,7 @@
       "author_name": "inFPTO",
       "discipline": "interdisciplinary",
       "weighted_score": 4.907247438149068,
-      "rating_count": 145,
+      "rating_count": 146,
       "comment_count": 0
     },
     "637c4358-0fc0-42fb-825c-b76b52616c59": {
@@ -17377,7 +17377,7 @@
       "author_name": "真名",
       "discipline": "medical",
       "weighted_score": 4.823154235349384,
-      "rating_count": 251,
+      "rating_count": 252,
       "comment_count": 0
     },
     "40cd854d-afe2-445b-90e0-fcd65632690b": {
@@ -17465,7 +17465,7 @@
       "author_name": "毛肚",
       "discipline": "humanities",
       "weighted_score": 4.867513812906782,
-      "rating_count": 570,
+      "rating_count": 571,
       "comment_count": 0
     },
     "1b913481-9200-4493-9233-13ea2dc41ac7": {
@@ -17663,7 +17663,7 @@
       "author_name": "Thejiang",
       "discipline": "humanities",
       "weighted_score": 4.7692097889868315,
-      "rating_count": 181,
+      "rating_count": 182,
       "comment_count": 0
     },
     "d70a60a4-7d6c-419e-b205-01e82dcadac0": {
@@ -19680,5 +19680,5 @@
       "comment_count": 0
     }
   },
-  "last_update": "2026-03-17T05:21:22.033473"
+  "last_update": "2026-03-17T13:21:55.662559"
 }
