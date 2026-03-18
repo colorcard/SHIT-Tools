@@ -5794,7 +5794,7 @@
       "author_name": "地外来屎",
       "discipline": "science",
       "weighted_score": 0.0,
-      "rating_count": 19,
+      "rating_count": 20,
       "comment_count": 0
     },
     "4abe6f9c-4e01-4e83-82ed-887650709da7": {
@@ -6366,7 +6366,7 @@
       "author_name": "胡小弟",
       "discipline": "interdisciplinary",
       "weighted_score": 0.0,
-      "rating_count": 10,
+      "rating_count": 11,
       "comment_count": 0
     },
     "3aea3b91-0cfb-4f52-87ba-fd6f43fc782d": {
@@ -17124,7 +17124,7 @@
       "author_name": "拖拖",
       "discipline": "interdisciplinary",
       "weighted_score": 4.84265621337223,
-      "rating_count": 202,
+      "rating_count": 203,
       "comment_count": 0
     },
     "a8ed9637-7e50-4e90-acdc-d3f723fb6834": {
@@ -17696,7 +17696,7 @@
       "author_name": "Yellow Dra",
       "discipline": "law_social",
       "weighted_score": 4.624897000563531,
-      "rating_count": 127,
+      "rating_count": 128,
       "comment_count": 0
     },
     "e1de4e93-9922-47a5-b3ae-3dd2ea035b5f": {
@@ -19654,7 +19654,7 @@
       "author_name": "QH",
       "discipline": "humanities",
       "weighted_score": 4.7843441974228,
-      "rating_count": 147,
+      "rating_count": 148,
       "comment_count": 0
     },
     "ac9c1fbe-2aea-4531-9a58-3fc42a15d0c8": {
@@ -19680,5 +19680,5 @@
       "comment_count": 0
     }
   },
-  "last_update": "2026-03-18T13:22:37.801743"
+  "last_update": "2026-03-18T20:32:13.280843"
 }
