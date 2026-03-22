@@ -1625,7 +1625,7 @@
       "author_name": "Shit_Producer",
       "discipline": "science",
       "weighted_score": 0.0,
-      "rating_count": 9,
+      "rating_count": 10,
       "comment_count": 0
     },
     "b72525f0-a842-4bef-bede-f63ef079006a": {
@@ -5794,7 +5794,7 @@
       "author_name": "地外来屎",
       "discipline": "science",
       "weighted_score": 0.0,
-      "rating_count": 27,
+      "rating_count": 28,
       "comment_count": 0
     },
     "4abe6f9c-4e01-4e83-82ed-887650709da7": {
@@ -6366,7 +6366,7 @@
       "author_name": "胡小弟",
       "discipline": "interdisciplinary",
       "weighted_score": 0.0,
-      "rating_count": 16,
+      "rating_count": 17,
       "comment_count": 0
     },
     "3aea3b91-0cfb-4f52-87ba-fd6f43fc782d": {
@@ -6861,7 +6861,7 @@
       "author_name": "Z紫罗兰",
       "discipline": "science",
       "weighted_score": 3.902928268173886,
-      "rating_count": 13,
+      "rating_count": 14,
       "comment_count": 0
     },
     "2a7dd709-5ef4-4860-995b-454c3b319c9c": {
@@ -17091,7 +17091,7 @@
       "author_name": "wabn",
       "discipline": "interdisciplinary",
       "weighted_score": 4.900372147749599,
-      "rating_count": 3553,
+      "rating_count": 3554,
       "comment_count": 0
     },
     "b5b882bd-4ca3-4b89-aec0-a9a597f6ed73": {
@@ -17465,7 +17465,7 @@
       "author_name": "毛肚",
       "discipline": "humanities",
       "weighted_score": 4.867513812906782,
-      "rating_count": 574,
+      "rating_count": 575,
       "comment_count": 0
     },
     "1b913481-9200-4493-9233-13ea2dc41ac7": {
@@ -19680,5 +19680,5 @@
       "comment_count": 0
     }
   },
-  "last_update": "2026-03-22T13:00:49.063324"
+  "last_update": "2026-03-22T20:22:32.922589"
 }
