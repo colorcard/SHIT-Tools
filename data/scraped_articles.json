@@ -1020,7 +1020,7 @@
       "author_name": "我草莓招了",
       "discipline": "interdisciplinary",
       "weighted_score": 4.123977928668888,
-      "rating_count": 10,
+      "rating_count": 13,
       "comment_count": 0
     },
     "c64c4b89-c8bf-40cf-83d5-d8f665f5fb06": {
@@ -4716,7 +4716,7 @@
       "author_name": "井底之蛙想看天",
       "discipline": "interdisciplinary",
       "weighted_score": 0.0,
-      "rating_count": 10,
+      "rating_count": 11,
       "comment_count": 0
     },
     "6307ad80-6be7-4e6d-ba29-a202d09aba56": {
@@ -17465,7 +17465,7 @@
       "author_name": "毛肚",
       "discipline": "humanities",
       "weighted_score": 4.867513812906782,
-      "rating_count": 573,
+      "rating_count": 574,
       "comment_count": 0
     },
     "1b913481-9200-4493-9233-13ea2dc41ac7": {
@@ -19680,5 +19680,5 @@
       "comment_count": 0
     }
   },
-  "last_update": "2026-03-22T05:18:51.105031"
+  "last_update": "2026-03-22T13:00:49.063324"
 }
