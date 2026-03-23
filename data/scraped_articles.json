@@ -1020,7 +1020,7 @@
       "author_name": "我草莓招了",
       "discipline": "interdisciplinary",
       "weighted_score": 4.123977928668888,
-      "rating_count": 13,
+      "rating_count": 14,
       "comment_count": 0
     },
     "c64c4b89-c8bf-40cf-83d5-d8f665f5fb06": {
@@ -1416,7 +1416,7 @@
       "author_name": "Lashimer",
       "discipline": "humanities",
       "weighted_score": 0.0,
-      "rating_count": 2,
+      "rating_count": 3,
       "comment_count": 0
     },
     "bbef56b2-fd2d-4dcc-80c0-3f92aae84444": {
@@ -5156,7 +5156,7 @@
       "author_name": "陈杰尼",
       "discipline": "engineering",
       "weighted_score": 4.134309422724629,
-      "rating_count": 20,
+      "rating_count": 21,
       "comment_count": 0
     },
     "58bef872-e321-48fd-8ac7-4df91a2938ba": {
@@ -5794,7 +5794,7 @@
       "author_name": "地外来屎",
       "discipline": "science",
       "weighted_score": 0.0,
-      "rating_count": 28,
+      "rating_count": 29,
       "comment_count": 0
     },
     "4abe6f9c-4e01-4e83-82ed-887650709da7": {
@@ -8709,7 +8709,7 @@
       "author_name": "屎王拉通地铁线",
       "discipline": "interdisciplinary",
       "weighted_score": 4.152928268173886,
-      "rating_count": 7,
+      "rating_count": 8,
       "comment_count": 0
     },
     "e34e781f-f24e-44ed-9fa9-6b2aa75ef72b": {
@@ -10073,7 +10073,7 @@
       "author_name": "夜郎少女的梦",
       "discipline": "interdisciplinary",
       "weighted_score": 4.26390256983399,
-      "rating_count": 45,
+      "rating_count": 46,
       "comment_count": 0
     },
     "ab2b26fa-559c-4b68-8f5a-6e9a9d6ee8ba": {
@@ -17465,7 +17465,7 @@
       "author_name": "毛肚",
       "discipline": "humanities",
       "weighted_score": 4.867513812906782,
-      "rating_count": 575,
+      "rating_count": 576,
       "comment_count": 0
     },
     "1b913481-9200-4493-9233-13ea2dc41ac7": {
@@ -19680,5 +19680,5 @@
       "comment_count": 0
     }
   },
-  "last_update": "2026-03-22T20:22:32.922589"
+  "last_update": "2026-03-23T05:39:22.207127"
 }
