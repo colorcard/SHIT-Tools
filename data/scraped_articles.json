@@ -5789,12 +5789,12 @@
     "4af6c3d3-b41d-4a4c-a8f8-c4aef9fb7841": {
       "id": "4af6c3d3-b41d-4a4c-a8f8-c4aef9fb7841",
       "manuscript_title": "学生课桌驻留时长与高精度工艺品加工精度的耦合关系研究",
-      "zone": "latrine",
+      "zone": "sediment",
       "created_at": "2026-03-03T09:29:42.835225Z",
       "author_name": "地外来屎",
       "discipline": "science",
       "weighted_score": 0.0,
-      "rating_count": 29,
+      "rating_count": 30,
       "comment_count": 0
     },
     "4abe6f9c-4e01-4e83-82ed-887650709da7": {
@@ -9666,7 +9666,7 @@
       "author_name": "今州拉屎侠",
       "discipline": "engineering",
       "weighted_score": 4.717876726915599,
-      "rating_count": 51,
+      "rating_count": 52,
       "comment_count": 0
     },
     "b6f4eaa4-db9e-4c52-b040-750e1b8a0c5c": {
@@ -17113,7 +17113,7 @@
       "author_name": "聆春意",
       "discipline": "medical",
       "weighted_score": 4.822459531976892,
-      "rating_count": 155,
+      "rating_count": 156,
       "comment_count": 0
     },
     "ab61ed09-69fb-4b0b-9a00-760c5cb548b9": {
@@ -19680,5 +19680,5 @@
       "comment_count": 0
     }
   },
-  "last_update": "2026-03-23T05:39:22.207127"
+  "last_update": "2026-03-23T13:17:36.457476"
 }
