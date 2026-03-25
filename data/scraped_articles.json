@@ -1416,7 +1416,7 @@
       "author_name": "Lashimer",
       "discipline": "humanities",
       "weighted_score": 0.0,
-      "rating_count": 3,
+      "rating_count": 4,
       "comment_count": 0
     },
     "bbef56b2-fd2d-4dcc-80c0-3f92aae84444": {
@@ -4518,7 +4518,7 @@
       "author_name": "TheShiter",
       "discipline": "science",
       "weighted_score": 0.0,
-      "rating_count": 5,
+      "rating_count": 6,
       "comment_count": 0
     },
     "667b82f5-98b1-4243-8d27-1eda5c256b9d": {
@@ -4716,7 +4716,7 @@
       "author_name": "井底之蛙想看天",
       "discipline": "interdisciplinary",
       "weighted_score": 0.0,
-      "rating_count": 13,
+      "rating_count": 14,
       "comment_count": 0
     },
     "6307ad80-6be7-4e6d-ba29-a202d09aba56": {
@@ -10986,7 +10986,7 @@
       "author_name": "酱味大史",
       "discipline": "humanities",
       "weighted_score": 4.665609866782607,
-      "rating_count": 57,
+      "rating_count": 58,
       "comment_count": 0
     },
     "8c20ddbc-97f7-421c-b4f0-19780d251af8": {
@@ -17223,7 +17223,7 @@
       "author_name": "爱吃石shitnigger",
       "discipline": "interdisciplinary",
       "weighted_score": 4.6159760954721705,
-      "rating_count": 514,
+      "rating_count": 515,
       "comment_count": 0
     },
     "7bce9b92-88ef-4f58-ad9b-e84850799939": {
@@ -17575,7 +17575,7 @@
       "author_name": "怒焰屠神灭世狂尊",
       "discipline": "humanities",
       "weighted_score": 4.8173504537604,
-      "rating_count": 150,
+      "rating_count": 151,
       "comment_count": 0
     },
     "01263260-3999-466b-bef5-10aa69f3d5a8": {
@@ -17619,7 +17619,7 @@
       "author_name": "兔",
       "discipline": "science",
       "weighted_score": 4.7605181529530824,
-      "rating_count": 189,
+      "rating_count": 190,
       "comment_count": 0
     },
     "c8878d5f-e1d1-4154-bd8f-1b810ab68131": {
@@ -17751,7 +17751,7 @@
       "author_name": "康三金",
       "discipline": "humanities",
       "weighted_score": 4.686307871316341,
-      "rating_count": 118,
+      "rating_count": 119,
       "comment_count": 0
     },
     "fc2f47ab-e22d-4701-a44f-d34bdf7c843f": {
@@ -19680,5 +19680,5 @@
       "comment_count": 0
     }
   },
-  "last_update": "2026-03-25T05:23:11.205907"
+  "last_update": "2026-03-25T13:20:48.926016"
 }
