@@ -4716,7 +4716,7 @@
       "author_name": "井底之蛙想看天",
       "discipline": "interdisciplinary",
       "weighted_score": 0.0,
-      "rating_count": 14,
+      "rating_count": 15,
       "comment_count": 0
     },
     "6307ad80-6be7-4e6d-ba29-a202d09aba56": {
@@ -5156,7 +5156,7 @@
       "author_name": "陈杰尼",
       "discipline": "engineering",
       "weighted_score": 4.134309422724629,
-      "rating_count": 22,
+      "rating_count": 23,
       "comment_count": 0
     },
     "58bef872-e321-48fd-8ac7-4df91a2938ba": {
@@ -6861,7 +6861,7 @@
       "author_name": "Z紫罗兰",
       "discipline": "science",
       "weighted_score": 3.902928268173886,
-      "rating_count": 15,
+      "rating_count": 16,
       "comment_count": 0
     },
     "2a7dd709-5ef4-4860-995b-454c3b319c9c": {
@@ -9743,7 +9743,7 @@
       "author_name": "Eugeniee",
       "discipline": "interdisciplinary",
       "weighted_score": 4.642310755661326,
-      "rating_count": 60,
+      "rating_count": 61,
       "comment_count": 0
     },
     "b5d43644-f93e-4f47-8b3f-3293ae4501c2": {
@@ -14220,7 +14220,7 @@
       "author_name": "baiheng_shit",
       "discipline": "interdisciplinary",
       "weighted_score": 4.658577355681158,
-      "rating_count": 52,
+      "rating_count": 53,
       "comment_count": 0
     },
     "1a18c58b-df01-4c90-9fb8-67d3cc70a7de": {
@@ -16101,7 +16101,7 @@
       "author_name": "夜郎少女的梦",
       "discipline": "humanities",
       "weighted_score": 4.321503492995008,
-      "rating_count": 98,
+      "rating_count": 99,
       "comment_count": 0
     },
     "e2748af7-e1c6-4390-aa0f-dc5c10973a0a": {
@@ -17289,7 +17289,7 @@
       "author_name": "inFPTO",
       "discipline": "interdisciplinary",
       "weighted_score": 4.907247438149068,
-      "rating_count": 148,
+      "rating_count": 149,
       "comment_count": 0
     },
     "637c4358-0fc0-42fb-825c-b76b52616c59": {
@@ -17322,7 +17322,7 @@
       "author_name": "lei285714",
       "discipline": "interdisciplinary",
       "weighted_score": 4.861371465957685,
-      "rating_count": 1540,
+      "rating_count": 1541,
       "comment_count": 0
     },
     "56df82e4-24ea-4915-8428-4aec70f858f5": {
@@ -17619,7 +17619,7 @@
       "author_name": "兔",
       "discipline": "science",
       "weighted_score": 4.7605181529530824,
-      "rating_count": 190,
+      "rating_count": 191,
       "comment_count": 0
     },
     "c8878d5f-e1d1-4154-bd8f-1b810ab68131": {
@@ -19665,7 +19665,7 @@
       "author_name": "答辩超人",
       "discipline": "medical",
       "weighted_score": 4.6864523717628455,
-      "rating_count": 141,
+      "rating_count": 142,
       "comment_count": 0
     },
     "9f492f9e-754e-4fa0-870e-505431ee94d0": {
@@ -19680,5 +19680,5 @@
       "comment_count": 0
     }
   },
-  "last_update": "2026-03-25T20:35:05.873480"
+  "last_update": "2026-03-26T05:41:14.301051"
 }
