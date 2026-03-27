@@ -1020,7 +1020,7 @@
       "author_name": "我草莓招了",
       "discipline": "interdisciplinary",
       "weighted_score": 4.123977928668888,
-      "rating_count": 15,
+      "rating_count": 16,
       "comment_count": 0
     },
     "c64c4b89-c8bf-40cf-83d5-d8f665f5fb06": {
@@ -1856,7 +1856,7 @@
       "author_name": "Dr.Sheet",
       "discipline": "law_social",
       "weighted_score": 4.124367289175979,
-      "rating_count": 53,
+      "rating_count": 54,
       "comment_count": 0
     },
     "b0d05b29-3c68-4cfd-8016-a8c47a1c5f22": {
@@ -5156,7 +5156,7 @@
       "author_name": "陈杰尼",
       "discipline": "engineering",
       "weighted_score": 4.134309422724629,
-      "rating_count": 23,
+      "rating_count": 24,
       "comment_count": 0
     },
     "58bef872-e321-48fd-8ac7-4df91a2938ba": {
@@ -17091,7 +17091,7 @@
       "author_name": "wabn",
       "discipline": "interdisciplinary",
       "weighted_score": 4.900372147749599,
-      "rating_count": 3556,
+      "rating_count": 3557,
       "comment_count": 0
     },
     "b5b882bd-4ca3-4b89-aec0-a9a597f6ed73": {
@@ -19680,5 +19680,5 @@
       "comment_count": 0
     }
   },
-  "last_update": "2026-03-27T05:42:01.910453"
+  "last_update": "2026-03-27T13:15:56.024723"
 }
