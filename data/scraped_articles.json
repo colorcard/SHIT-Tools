@@ -1020,7 +1020,7 @@
       "author_name": "我草莓招了",
       "discipline": "interdisciplinary",
       "weighted_score": 4.123977928668888,
-      "rating_count": 17,
+      "rating_count": 18,
       "comment_count": 0
     },
     "c64c4b89-c8bf-40cf-83d5-d8f665f5fb06": {
@@ -1856,7 +1856,7 @@
       "author_name": "Dr.Sheet",
       "discipline": "law_social",
       "weighted_score": 4.124367289175979,
-      "rating_count": 55,
+      "rating_count": 56,
       "comment_count": 0
     },
     "b0d05b29-3c68-4cfd-8016-a8c47a1c5f22": {
@@ -6366,7 +6366,7 @@
       "author_name": "胡小弟",
       "discipline": "interdisciplinary",
       "weighted_score": 0.0,
-      "rating_count": 18,
+      "rating_count": 19,
       "comment_count": 0
     },
     "3aea3b91-0cfb-4f52-87ba-fd6f43fc782d": {
@@ -6861,7 +6861,7 @@
       "author_name": "Z紫罗兰",
       "discipline": "science",
       "weighted_score": 3.902928268173886,
-      "rating_count": 16,
+      "rating_count": 17,
       "comment_count": 0
     },
     "2a7dd709-5ef4-4860-995b-454c3b319c9c": {
@@ -17091,7 +17091,7 @@
       "author_name": "wabn",
       "discipline": "interdisciplinary",
       "weighted_score": 4.900372147749599,
-      "rating_count": 3557,
+      "rating_count": 3558,
       "comment_count": 0
     },
     "b5b882bd-4ca3-4b89-aec0-a9a597f6ed73": {
@@ -17256,7 +17256,7 @@
       "author_name": "法式螺翔 (KSY) 🐌⚖️",
       "discipline": "law_social",
       "weighted_score": 4.910876046283016,
-      "rating_count": 828,
+      "rating_count": 829,
       "comment_count": 0
     },
     "7276d656-e24e-41af-9c78-c1f854d23ced": {
@@ -19680,5 +19680,5 @@
       "comment_count": 0
     }
   },
-  "last_update": "2026-03-30T05:58:23.547266"
+  "last_update": "2026-03-30T13:43:11.703862"
 }
