@@ -1020,7 +1020,7 @@
       "author_name": "我草莓招了",
       "discipline": "interdisciplinary",
       "weighted_score": 4.123977928668888,
-      "rating_count": 18,
+      "rating_count": 20,
       "comment_count": 0
     },
     "c64c4b89-c8bf-40cf-83d5-d8f665f5fb06": {
@@ -6861,7 +6861,7 @@
       "author_name": "Z紫罗兰",
       "discipline": "science",
       "weighted_score": 3.902928268173886,
-      "rating_count": 17,
+      "rating_count": 18,
       "comment_count": 0
     },
     "2a7dd709-5ef4-4860-995b-454c3b319c9c": {
@@ -8170,7 +8170,7 @@
       "author_name": "化粪池畅游选手",
       "discipline": "interdisciplinary",
       "weighted_score": 4.217642756057962,
-      "rating_count": 30,
+      "rating_count": 31,
       "comment_count": 0
     },
     "0abcac69-c706-40de-9dac-14543ca67078": {
@@ -9864,7 +9864,7 @@
       "author_name": "Wagner Zeno",
       "discipline": "law_social",
       "weighted_score": 4.3717074541117995,
-      "rating_count": 42,
+      "rating_count": 43,
       "comment_count": 0
     },
     "b159875d-ad27-44f6-a181-891b87d03984": {
@@ -11239,7 +11239,7 @@
       "author_name": "1RAN",
       "discipline": "law_social",
       "weighted_score": 4.146926957171013,
-      "rating_count": 42,
+      "rating_count": 43,
       "comment_count": 0
     },
     "844fab6d-fd9a-4548-b5cc-718ff6e49150": {
@@ -11338,7 +11338,7 @@
       "author_name": "七彩旋转大蟑螂",
       "discipline": "humanities",
       "weighted_score": 3.8631798717165844,
-      "rating_count": 51,
+      "rating_count": 52,
       "comment_count": 0
     },
     "80bea6f3-c8fc-4a90-b5cc-12043d9c1299": {
@@ -17201,7 +17201,7 @@
       "author_name": "小宋在种地",
       "discipline": "interdisciplinary",
       "weighted_score": 4.566508854545224,
-      "rating_count": 134,
+      "rating_count": 135,
       "comment_count": 0
     },
     "80e38b5b-36f0-4aa8-96b1-2863ac61da53": {
@@ -17355,7 +17355,7 @@
       "author_name": "Jiaoda Jishi",
       "discipline": "interdisciplinary",
       "weighted_score": 4.845193372394484,
-      "rating_count": 164,
+      "rating_count": 165,
       "comment_count": 0
     },
     "4380f877-5218-4a21-8a7b-ee7bfe7a81f7": {
@@ -17641,7 +17641,7 @@
       "author_name": "左旋多巴",
       "discipline": "interdisciplinary",
       "weighted_score": 4.912522440289801,
-      "rating_count": 1144,
+      "rating_count": 1145,
       "comment_count": 0
     },
     "d2841233-418d-4d05-9ce5-38249e85c05f": {
@@ -19680,5 +19680,5 @@
       "comment_count": 0
     }
   },
-  "last_update": "2026-03-30T20:40:52.870666"
+  "last_update": "2026-03-31T05:43:53.429417"
 }
