@@ -1020,7 +1020,7 @@
       "author_name": "我草莓招了",
       "discipline": "interdisciplinary",
       "weighted_score": 4.123977928668888,
-      "rating_count": 20,
+      "rating_count": 21,
       "comment_count": 0
     },
     "c64c4b89-c8bf-40cf-83d5-d8f665f5fb06": {
@@ -6674,7 +6674,7 @@
       "author_name": "Eugeniee",
       "discipline": "engineering",
       "weighted_score": 4.152928268173886,
-      "rating_count": 16,
+      "rating_count": 17,
       "comment_count": 0
     },
     "305044fd-7f89-4cf4-a415-623fcdd6186d": {
@@ -8929,7 +8929,7 @@
       "author_name": "从零世界回来的乌拉拉",
       "discipline": "science",
       "weighted_score": 0.0,
-      "rating_count": 3,
+      "rating_count": 4,
       "comment_count": 0
     },
     "e9545222-d89d-4ae5-bff2-b42416e60a45": {
@@ -11756,7 +11756,7 @@
       "author_name": "姑获鸟",
       "discipline": "interdisciplinary",
       "weighted_score": 4.22662402822883,
-      "rating_count": 50,
+      "rating_count": 51,
       "comment_count": 0
     },
     "7452248f-4bdc-4766-999c-bf55522517ae": {
@@ -17091,7 +17091,7 @@
       "author_name": "wabn",
       "discipline": "interdisciplinary",
       "weighted_score": 4.900372147749599,
-      "rating_count": 3558,
+      "rating_count": 3559,
       "comment_count": 0
     },
     "b5b882bd-4ca3-4b89-aec0-a9a597f6ed73": {
@@ -17212,7 +17212,7 @@
       "author_name": "DKU第一猛1",
       "discipline": "interdisciplinary",
       "weighted_score": 4.8378641739579935,
-      "rating_count": 673,
+      "rating_count": 674,
       "comment_count": 0
     },
     "7cd4f941-d5f0-4a82-8fa4-fa6f1a952e2d": {
@@ -17564,7 +17564,7 @@
       "author_name": "DR.REN",
       "discipline": "medical",
       "weighted_score": 4.845324805645766,
-      "rating_count": 196,
+      "rating_count": 197,
       "comment_count": 0
     },
     "060f5d41-3eec-4063-9921-185571b14cb4": {
@@ -19680,5 +19680,5 @@
       "comment_count": 0
     }
   },
-  "last_update": "2026-03-31T05:43:53.429417"
+  "last_update": "2026-03-31T13:42:49.933748"
 }
