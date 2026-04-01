@@ -5156,7 +5156,7 @@
       "author_name": "陈杰尼",
       "discipline": "engineering",
       "weighted_score": 4.134309422724629,
-      "rating_count": 24,
+      "rating_count": 25,
       "comment_count": 0
     },
     "58bef872-e321-48fd-8ac7-4df91a2938ba": {
@@ -6410,7 +6410,7 @@
       "author_name": "aaa小蜜蜂",
       "discipline": "science",
       "weighted_score": 4.402928268173886,
-      "rating_count": 19,
+      "rating_count": 20,
       "comment_count": 0
     },
     "3a13130e-de7f-453b-a399-ae856981b1ed": {
@@ -17168,7 +17168,7 @@
       "author_name": "Dr. 阿波",
       "discipline": "science",
       "weighted_score": 4.87860136682267,
-      "rating_count": 1112,
+      "rating_count": 1113,
       "comment_count": 0
     },
     "88bee4eb-07e1-4a39-8bc4-b91375b36f51": {
@@ -17421,7 +17421,7 @@
       "author_name": "特种兵溜娃",
       "discipline": "interdisciplinary",
       "weighted_score": 4.821463458570196,
-      "rating_count": 136,
+      "rating_count": 137,
       "comment_count": 0
     },
     "2fcab3fa-5287-4983-9a21-b762f400405b": {
@@ -17465,7 +17465,7 @@
       "author_name": "毛肚",
       "discipline": "humanities",
       "weighted_score": 4.867513812906782,
-      "rating_count": 578,
+      "rating_count": 579,
       "comment_count": 0
     },
     "1b913481-9200-4493-9233-13ea2dc41ac7": {
@@ -17509,7 +17509,7 @@
       "author_name": "holy shit",
       "discipline": "interdisciplinary",
       "weighted_score": 4.847649223275427,
-      "rating_count": 1402,
+      "rating_count": 1403,
       "comment_count": 0
     },
     "0f283551-f349-4ae1-87f3-9394841bacb3": {
@@ -17564,7 +17564,7 @@
       "author_name": "DR.REN",
       "discipline": "medical",
       "weighted_score": 4.845324805645766,
-      "rating_count": 197,
+      "rating_count": 198,
       "comment_count": 0
     },
     "060f5d41-3eec-4063-9921-185571b14cb4": {
@@ -17575,7 +17575,7 @@
       "author_name": "怒焰屠神灭世狂尊",
       "discipline": "humanities",
       "weighted_score": 4.8173504537604,
-      "rating_count": 151,
+      "rating_count": 152,
       "comment_count": 0
     },
     "01263260-3999-466b-bef5-10aa69f3d5a8": {
@@ -19680,5 +19680,5 @@
       "comment_count": 0
     }
   },
-  "last_update": "2026-04-01T05:54:54.991087"
+  "last_update": "2026-04-01T13:44:23.804723"
 }
