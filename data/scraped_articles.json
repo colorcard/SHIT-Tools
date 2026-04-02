@@ -4716,7 +4716,7 @@
       "author_name": "井底之蛙想看天",
       "discipline": "interdisciplinary",
       "weighted_score": 0.0,
-      "rating_count": 15,
+      "rating_count": 16,
       "comment_count": 0
     },
     "6307ad80-6be7-4e6d-ba29-a202d09aba56": {
@@ -10392,7 +10392,7 @@
       "author_name": "chow",
       "discipline": "humanities",
       "weighted_score": 4.653780590583849,
-      "rating_count": 57,
+      "rating_count": 58,
       "comment_count": 0
     },
     "a1c298c4-fd9e-4ba6-aa08-53de8893c29e": {
@@ -19680,5 +19680,5 @@
       "comment_count": 0
     }
   },
-  "last_update": "2026-04-02T13:23:33.200891"
+  "last_update": "2026-04-02T20:31:19.792957"
 }
