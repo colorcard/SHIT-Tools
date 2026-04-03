@@ -6410,7 +6410,7 @@
       "author_name": "aaa小蜜蜂",
       "discipline": "science",
       "weighted_score": 4.402928268173886,
-      "rating_count": 21,
+      "rating_count": 23,
       "comment_count": 0
     },
     "3a13130e-de7f-453b-a399-ae856981b1ed": {
@@ -16860,7 +16860,7 @@
       "author_name": "当地一名比较英俊的年轻人",
       "discipline": "engineering",
       "weighted_score": 3.890292826817389,
-      "rating_count": 39,
+      "rating_count": 40,
       "comment_count": 0
     },
     "f83f8cdc-f487-4157-83dd-18fb8987e6a9": {
@@ -19676,9 +19676,9 @@
       "author_name": "Dr.TonyJ",
       "discipline": "law_social",
       "weighted_score": 4.836769811082501,
-      "rating_count": 583,
+      "rating_count": 584,
       "comment_count": 0
     }
   },
-  "last_update": "2026-04-03T13:12:44.875681"
+  "last_update": "2026-04-03T20:31:45.830107"
 }
