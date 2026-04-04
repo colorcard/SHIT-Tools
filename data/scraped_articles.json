@@ -6674,7 +6674,7 @@
       "author_name": "Eugeniee",
       "discipline": "engineering",
       "weighted_score": 4.152928268173886,
-      "rating_count": 17,
+      "rating_count": 18,
       "comment_count": 0
     },
     "305044fd-7f89-4cf4-a415-623fcdd6186d": {
@@ -9545,7 +9545,7 @@
       "author_name": "魔法披风",
       "discipline": "humanities",
       "weighted_score": 0.0,
-      "rating_count": 8,
+      "rating_count": 9,
       "comment_count": 0
     },
     "fd9bac9c-6e36-4f61-850f-be457d9ef637": {
@@ -19680,5 +19680,5 @@
       "comment_count": 0
     }
   },
-  "last_update": "2026-04-04T05:21:15.501726"
+  "last_update": "2026-04-04T13:04:39.004258"
 }
