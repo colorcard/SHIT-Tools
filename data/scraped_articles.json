@@ -1020,7 +1020,7 @@
       "author_name": "我草莓招了",
       "discipline": "interdisciplinary",
       "weighted_score": 4.123977928668888,
-      "rating_count": 25,
+      "rating_count": 26,
       "comment_count": 0
     },
     "c64c4b89-c8bf-40cf-83d5-d8f665f5fb06": {
@@ -6317,12 +6317,12 @@
     "3c9a4e35-b955-4f8a-a777-3c4b20023141": {
       "id": "3c9a4e35-b955-4f8a-a777-3c4b20023141",
       "manuscript_title": "《基于数字生命蜂群与跨位面潜入调查的卡池概率实证研究》",
-      "zone": "sediment",
+      "zone": "septic",
       "created_at": "2026-03-05T12:18:00.765622Z",
       "author_name": "我本是我沐",
       "discipline": "interdisciplinary",
       "weighted_score": 3.7828830066086856,
-      "rating_count": 43,
+      "rating_count": 44,
       "comment_count": 0
     },
     "3c86a01e-dd29-429f-b0cd-3ebfa4871935": {
@@ -17091,7 +17091,7 @@
       "author_name": "wabn",
       "discipline": "interdisciplinary",
       "weighted_score": 4.900372147749599,
-      "rating_count": 3560,
+      "rating_count": 3562,
       "comment_count": 0
     },
     "b5b882bd-4ca3-4b89-aec0-a9a597f6ed73": {
@@ -17289,7 +17289,7 @@
       "author_name": "inFPTO",
       "discipline": "interdisciplinary",
       "weighted_score": 4.907247438149068,
-      "rating_count": 149,
+      "rating_count": 151,
       "comment_count": 0
     },
     "637c4358-0fc0-42fb-825c-b76b52616c59": {
@@ -19680,5 +19680,5 @@
       "comment_count": 0
     }
   },
-  "last_update": "2026-04-05T05:44:18.345658"
+  "last_update": "2026-04-05T13:06:54.230773"
 }
