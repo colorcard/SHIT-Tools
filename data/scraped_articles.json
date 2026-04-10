@@ -349,7 +349,7 @@
       "author_name": "饿死鬼",
       "discipline": "humanities",
       "weighted_score": 4.402928268173886,
-      "rating_count": 31,
+      "rating_count": 32,
       "comment_count": 0
     },
     "d7b8a5af-44dd-4e89-afb0-3f154bcec08a": {
@@ -5156,7 +5156,7 @@
       "author_name": "陈杰尼",
       "discipline": "engineering",
       "weighted_score": 4.134309422724629,
-      "rating_count": 27,
+      "rating_count": 28,
       "comment_count": 0
     },
     "58bef872-e321-48fd-8ac7-4df91a2938ba": {
@@ -14099,7 +14099,7 @@
       "author_name": "洛杉矶大闸蟹",
       "discipline": "science",
       "weighted_score": 4.527114952992575,
-      "rating_count": 39,
+      "rating_count": 40,
       "comment_count": 0
     },
     "1fb91ba0-ac87-49da-a39f-f462d81186f2": {
@@ -19680,5 +19680,5 @@
       "comment_count": 0
     }
   },
-  "last_update": "2026-04-10T05:57:46.037443"
+  "last_update": "2026-04-10T13:20:34.918989"
 }
