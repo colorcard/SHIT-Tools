@@ -1625,7 +1625,7 @@
       "author_name": "Shit_Producer",
       "discipline": "science",
       "weighted_score": 0.0,
-      "rating_count": 11,
+      "rating_count": 12,
       "comment_count": 0
     },
     "b72525f0-a842-4bef-bede-f63ef079006a": {
@@ -6674,7 +6674,7 @@
       "author_name": "Eugeniee",
       "discipline": "engineering",
       "weighted_score": 4.152928268173886,
-      "rating_count": 18,
+      "rating_count": 19,
       "comment_count": 0
     },
     "305044fd-7f89-4cf4-a415-623fcdd6186d": {
@@ -9545,7 +9545,7 @@
       "author_name": "魔法披风",
       "discipline": "humanities",
       "weighted_score": 0.0,
-      "rating_count": 10,
+      "rating_count": 11,
       "comment_count": 0
     },
     "fd9bac9c-6e36-4f61-850f-be457d9ef637": {
@@ -18213,7 +18213,7 @@
       "author_name": "SAwassnn",
       "discipline": "law_social",
       "weighted_score": 3.363257124195316,
-      "rating_count": 69,
+      "rating_count": 70,
       "comment_count": 0
     },
     "7f3ffaf9-ddf9-43c5-8078-9ce372c5a0e7": {
@@ -19680,5 +19680,5 @@
       "comment_count": 0
     }
   },
-  "last_update": "2026-04-09T20:44:11.243810"
+  "last_update": "2026-04-10T05:57:46.037443"
 }
