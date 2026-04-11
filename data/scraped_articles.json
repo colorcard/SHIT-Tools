@@ -9545,7 +9545,7 @@
       "author_name": "魔法披风",
       "discipline": "humanities",
       "weighted_score": 0.0,
-      "rating_count": 11,
+      "rating_count": 12,
       "comment_count": 0
     },
     "fd9bac9c-6e36-4f61-850f-be457d9ef637": {
@@ -16662,7 +16662,7 @@
       "author_name": "Owen Claussen",
       "discipline": "engineering",
       "weighted_score": 3.9457207516521717,
-      "rating_count": 59,
+      "rating_count": 60,
       "comment_count": 0
     },
     "f183ecbe-7b71-4454-9422-2e82e73aa290": {
@@ -19680,5 +19680,5 @@
       "comment_count": 0
     }
   },
-  "last_update": "2026-04-10T20:31:53.570485"
+  "last_update": "2026-04-11T05:24:18.651630"
 }
