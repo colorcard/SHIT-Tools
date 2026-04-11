@@ -4716,7 +4716,7 @@
       "author_name": "井底之蛙想看天",
       "discipline": "interdisciplinary",
       "weighted_score": 0.0,
-      "rating_count": 20,
+      "rating_count": 21,
       "comment_count": 0
     },
     "6307ad80-6be7-4e6d-ba29-a202d09aba56": {
@@ -5151,12 +5151,12 @@
     "58fa9d57-4aa8-4f18-bad7-25a88b5b5a29": {
       "id": "58fa9d57-4aa8-4f18-bad7-25a88b5b5a29",
       "manuscript_title": "伏特加摄入对高铁乘坐期间主观时间感知的量化影响研究：基于药代动力学-时间认知模型的初步探讨",
-      "zone": "latrine",
+      "zone": "septic",
       "created_at": "2026-03-03T09:19:32.610245Z",
       "author_name": "陈杰尼",
       "discipline": "engineering",
       "weighted_score": 4.134309422724629,
-      "rating_count": 29,
+      "rating_count": 30,
       "comment_count": 0
     },
     "58bef872-e321-48fd-8ac7-4df91a2938ba": {
@@ -8709,7 +8709,7 @@
       "author_name": "屎王拉通地铁线",
       "discipline": "interdisciplinary",
       "weighted_score": 4.152928268173886,
-      "rating_count": 9,
+      "rating_count": 10,
       "comment_count": 0
     },
     "e34e781f-f24e-44ed-9fa9-6b2aa75ef72b": {
@@ -11217,7 +11217,7 @@
       "author_name": "DeadlyPig",
       "discipline": "engineering",
       "weighted_score": 4.642310755661326,
-      "rating_count": 60,
+      "rating_count": 61,
       "comment_count": 0
     },
     "84b0ea87-a35e-472c-90e1-d7e575c08f96": {
@@ -17091,7 +17091,7 @@
       "author_name": "wabn",
       "discipline": "interdisciplinary",
       "weighted_score": 4.900372147749599,
-      "rating_count": 3567,
+      "rating_count": 3568,
       "comment_count": 0
     },
     "b5b882bd-4ca3-4b89-aec0-a9a597f6ed73": {
@@ -17234,7 +17234,7 @@
       "author_name": "Truth of the shit",
       "discipline": "law_social",
       "weighted_score": 4.882728783971232,
-      "rating_count": 609,
+      "rating_count": 610,
       "comment_count": 0
     },
     "776f5acb-adfd-41df-8b58-c1105975e4e0": {
@@ -17289,7 +17289,7 @@
       "author_name": "inFPTO",
       "discipline": "interdisciplinary",
       "weighted_score": 4.907247438149068,
-      "rating_count": 151,
+      "rating_count": 152,
       "comment_count": 0
     },
     "637c4358-0fc0-42fb-825c-b76b52616c59": {
@@ -17388,7 +17388,7 @@
       "author_name": "T.屎塔克",
       "discipline": "interdisciplinary",
       "weighted_score": 4.731607613656425,
-      "rating_count": 223,
+      "rating_count": 224,
       "comment_count": 0
     },
     "3c4c5516-b065-4074-80ee-3fb173277d36": {
@@ -17465,7 +17465,7 @@
       "author_name": "毛肚",
       "discipline": "humanities",
       "weighted_score": 4.867513812906782,
-      "rating_count": 581,
+      "rating_count": 582,
       "comment_count": 0
     },
     "1b913481-9200-4493-9233-13ea2dc41ac7": {
@@ -17762,7 +17762,7 @@
       "author_name": "Yunlk",
       "discipline": "interdisciplinary",
       "weighted_score": 4.664313412561792,
-      "rating_count": 165,
+      "rating_count": 166,
       "comment_count": 0
     },
     "ba748e93-251a-46d4-8478-53798897414e": {
@@ -19680,5 +19680,5 @@
       "comment_count": 0
     }
   },
-  "last_update": "2026-04-11T05:24:18.651630"
+  "last_update": "2026-04-11T13:07:53.077981"
 }
