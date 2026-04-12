@@ -17311,7 +17311,7 @@
       "author_name": "茅斯",
       "discipline": "agriculture",
       "weighted_score": 4.765497241083611,
-      "rating_count": 108,
+      "rating_count": 109,
       "comment_count": 0
     },
     "58409a4b-0b9c-475f-8e52-5d976114d7ff": {
@@ -17344,7 +17344,7 @@
       "author_name": "刑部大学士",
       "discipline": "law_social",
       "weighted_score": 4.808953961514975,
-      "rating_count": 186,
+      "rating_count": 187,
       "comment_count": 0
     },
     "486a2c64-d2da-4d30-85be-7973d19f117f": {
@@ -17487,7 +17487,7 @@
       "author_name": "堂吉蝌蚪",
       "discipline": "interdisciplinary",
       "weighted_score": 4.759522469039829,
-      "rating_count": 142,
+      "rating_count": 143,
       "comment_count": 0
     },
     "163fb477-bd5e-4104-b66f-fd1922bf9169": {
@@ -17751,7 +17751,7 @@
       "author_name": "康三金",
       "discipline": "humanities",
       "weighted_score": 4.686307871316341,
-      "rating_count": 119,
+      "rating_count": 120,
       "comment_count": 0
     },
     "fc2f47ab-e22d-4701-a44f-d34bdf7c843f": {
@@ -19680,5 +19680,5 @@
       "comment_count": 0
     }
   },
-  "last_update": "2026-04-11T20:28:16.166084"
+  "last_update": "2026-04-12T05:53:36.822828"
 }
