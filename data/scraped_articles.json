@@ -4716,7 +4716,7 @@
       "author_name": "井底之蛙想看天",
       "discipline": "interdisciplinary",
       "weighted_score": 0.0,
-      "rating_count": 21,
+      "rating_count": 22,
       "comment_count": 0
     },
     "6307ad80-6be7-4e6d-ba29-a202d09aba56": {
@@ -10073,7 +10073,7 @@
       "author_name": "夜郎少女的梦",
       "discipline": "interdisciplinary",
       "weighted_score": 4.26390256983399,
-      "rating_count": 47,
+      "rating_count": 48,
       "comment_count": 0
     },
     "ab2b26fa-559c-4b68-8f5a-6e9a9d6ee8ba": {
@@ -10865,7 +10865,7 @@
       "author_name": "赤石大王",
       "discipline": "engineering",
       "weighted_score": 3.850979572582469,
-      "rating_count": 70,
+      "rating_count": 71,
       "comment_count": 0
     },
     "91ad269e-f0ee-411f-a929-144180e025e1": {
@@ -17047,7 +17047,7 @@
       "author_name": "雷霆弟",
       "discipline": "interdisciplinary",
       "weighted_score": 4.419326501730846,
-      "rating_count": 49,
+      "rating_count": 50,
       "comment_count": 0
     },
     "fef2bbb3-ba61-416c-b9eb-6dd8f7add197": {
@@ -19680,5 +19680,5 @@
       "comment_count": 0
     }
   },
-  "last_update": "2026-04-12T13:10:01.839652"
+  "last_update": "2026-04-12T20:31:12.118704"
 }
