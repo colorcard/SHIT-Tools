@@ -1,11 +1,9 @@
 name: Update Data
 
+# 项目已停止维护：官方站点停止更新，自动拉取已关闭。
+# 仅保留手动触发，供有需要时一次性抓取使用。
 on:
-  schedule:
-    - cron: '0 20 * * *'  # 中国时间凌晨 04:00
-    - cron: '0 4 * * *'   # 中国时间中午 12:00
-    - cron: '0 12 * * *'  # 中国时间晚上 20:00
-  workflow_dispatch:  # 允许手动触发
+  workflow_dispatch:  # 仅允许手动触发
 
 permissions:
   contents: write

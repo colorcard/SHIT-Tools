@@ -12,12 +12,14 @@
 
 </div>
 
->[!WARNING]
-> **服务状态提醒**
+>[!IMPORTANT]
+> **本仓库已停止维护（Archived）**
 >
-> 官方站点 https://shitjournal.org/ 目前在大陆地区无法访问，且面临舆论压力，存在关站风险。
+> 由于 S.H.I.T Journal 官方站点已停止更新，本项目自 2026-09-23 起**停止维护**，并已**关闭自动数据拉取**（不再定时抓取、自动打包发布）。
 >
-> 本工具依赖官方 API，若期刊停止服务可能失效。建议及时前往 [Release](https://github.com/colorcard/SHIT-Tools/releases/tag/latest) 下载完整归档。
+> - 仓库代码与历史数据将继续保留，供查阅与自行部署
+> - 现有归档仍可在 [Release](https://github.com/colorcard/SHIT-Tools/releases/tag/latest) 下载
+> - 不再接受新的功能更新与问题修复，Pull Request 与 Issue 可能不会被处理
 
 ---
 
@@ -146,7 +148,7 @@ SHIT-Tools/
 
 ### 3. 数据爬虫
 
-多线程自动化数据采集工具。
+多线程自动化数据采集工具。**注意：** 官方站点已停止更新，自动拉取已关闭，此脚本仅可手动运行。
 
 **功能特性：**
 - 爬取四个发酵区（旱厕/化粪池/构石/沉淀区）所有文章
@@ -220,8 +222,8 @@ python src/compress_articles.py
 ```
 
 **自动化：**
-- GitHub Actions 自动在部署时压缩
-- 本地开发脚本集成压缩流程
+- ~~GitHub Actions 自动在部署时压缩~~（已停止维护，不再自动运行）
+- 本地开发脚本仍集成压缩流程
 
 ---
 
@@ -276,7 +278,7 @@ const { data } = supabase.storage
 - **活跃作者：** 200+
 - **覆盖分区：** 4 个（旱厕、化粪池、构石、沉淀区）
 - **学科领域：** 10+ 个
-- **数据更新：** 每日通过 GitHub Actions 自动更新
+- **数据更新：** 已于 2026-09-23 停止自动更新（站点停止更新）
 
 ---
 
@@ -284,23 +286,24 @@ const { data } = supabase.storage
 
 ### GitHub Pages
 
-Web 工具通过 GitHub Actions 自动部署：
+Web 工具通过 GitHub Actions 部署（仅在 `docs/` 或数据文件变更时触发）：
 
 ```yaml
-# .github/workflows/deploy.yml
+# .github/workflows/static.yml
 on:
   push:
     branches: [main]
-  schedule:
-    - cron: '0 20 * * *'  # 每日 04:00 CST
+    paths:
+      - 'docs/**'
+      - 'data/scraped_articles.json'
 ```
 
 ### 本地开发
 
 ```bash
 # 克隆仓库
-git clone https://github.com/colorcard/SHIT-PDF-Downloader.git
-cd SHIT-PDF-Downloader
+git clone https://github.com/colorcard/SHIT-Tools.git
+cd SHIT-Tools
 
 # 打开 Web 工具
 open docs/shitjournal_downloader.html

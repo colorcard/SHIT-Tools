@@ -1,10 +1,7 @@
 name: Release PDFs
 
+# 项目已停止维护：不再随数据更新自动打包发布，仅保留手动触发。
 on:
-  workflow_run:
-    workflows: ["Update Data"]
-    types:
-      - completed
   workflow_dispatch:
 
 permissions:
@@ -13,7 +10,6 @@ permissions:
 jobs:
   release-pdfs:
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     steps:
       - name: Checkout code
